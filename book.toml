@@ -1,0 +1,6 @@
+[book]
+authors = ["Matteo Di Tucci"]
+language = "en"
+src = "src"
+title = "Tech Leadership"
+description = "A catalog of tech leadership problems with my proposed solutions"
