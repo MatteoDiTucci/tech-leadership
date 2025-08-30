@@ -5,4 +5,4 @@
     - [Communication patterns in remote team](ways-of-working/communication-patterns-in-remote-team.md)
     - [Next quarter planning](ways-of-working/next-quarter-planning.md)
 - [Tech](tech/introduction.md)
-    - [Tech](tech/lightweight-business-configuration.md)
+    - [Lightweight business configuration](tech/lightweight-business-configuration.md)
