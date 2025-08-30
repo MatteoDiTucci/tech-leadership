@@ -1,4 +1,4 @@
-# A Compendium of Software design
+# Tech Leadership
 
 ![CI/CD](https://github.com/matteoditucci/tech-leadership/workflows/github-pages/badge.svg)
 
