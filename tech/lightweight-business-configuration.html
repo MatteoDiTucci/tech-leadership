@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Next quarter planning - Tech Leadership</title>
+        <title>Tech - Tech Leadership</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html" class="active"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Tech</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/lightweight-business-configuration.html" class="active"><strong aria-hidden="true">3.1.</strong> Tech</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,98 +144,89 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="problem"><a class="header" href="#problem">Problem</a></h1>
-<p>Leadership wants to know the delivery timeline of the team for the next quarter:</p>
-<ul>
-<li>what will be delivered</li>
-<li>when it will be delivered</li>
-</ul>
+<p>An e-commerce has some commercial configuration to update every now and then.
+For example: what products are in pre-sale, what products are under promotion, etc.</p>
+<p>How to enable non-technical roles to update such configuration with minimal effort?</p>
 <h1 id="context"><a class="header" href="#context">Context</a></h1>
 <ul>
-<li>Different stakeholders push for different initiatives</li>
-<li>The problem behind each initiative is clear, but the solution is not</li>
-<li>Cross-functional team</li>
+<li>Update frequency: once a day</li>
+<li>Data to change: a handful of products SKU or dates</li>
+<li>Existing systems:
+<ul>
+<li>Front-end app</li>
+<li>Product catalog back-end app</li>
+<li>Headless content management system (third party)</li>
+</ul>
+</li>
+<li>Current path to prod:
+<ul>
+<li>Continuous Deployment</li>
+</ul>
+</li>
+<li>Current solution:
+<ul>
+<li>Configuration is stored in code as a handful of JSON files inside the front-end app</li>
+<li>For any configuration change, a support ticket to engineers is created</li>
+</ul>
+</li>
 </ul>
 <h1 id="solution"><a class="header" href="#solution">Solution</a></h1>
+<p>Non-technical roles change configuration autonomously using GitHub web interface.
+<img width="1596" height="333" alt="image" src="https://github.com/user-attachments/assets/7d232fb5-ed50-4efc-aadd-e7d0bab997b4" /></p>
+<h2 id="security"><a class="header" href="#security">Security</a></h2>
 <ul>
-<li>Assign a time appetite for each initiative until the whole quarter is covered</li>
-<li>At the end of an initiative time appetite, decide to either:
+<li>Non-technical roles adhere to the same security practices as engineers (e.g. strong passwords, password manager, 2nd factor authentication, encrypted laptop filesystem, etc.)</li>
+<li>Non-technical roles have write privileges on the front-end app repository, but not admin ones</li>
+</ul>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
 <ul>
-<li>move to the next initiative, as planned</li>
-<li>keep working on the current initiative and subtract the extra time appetite from an upcoming initiative</li>
+<li>Unit tests over the JSON files cover against:
+<ul>
+<li>malformed JSON</li>
+<li>content validation (e.g. pre-sale dates in the past)</li>
+<li>business invariant violations (e.g. avoid duplicates)</li>
 </ul>
 </li>
 </ul>
-<h2 id="time-appetite"><a class="header" href="#time-appetite">Time appetite</a></h2>
+<h2 id="failure-and-recovery"><a class="header" href="#failure-and-recovery">Failure and recovery</a></h2>
 <ul>
-<li>Time appetite means the amount of weeks the team desire to work on an initiative</li>
-<li>Time appetite only covers delivery, not planning (see later)</li>
-<li>The key idea is to deliver the best within a fixed time frame and then reassess global priorities</li>
+<li>If a non-technical role makes a mistake with a JSON file, then the Continuous Deployment pipeline breaks</li>
+<li>An engineer reverts the change and then reaches out to the author to fix the issue together</li>
 </ul>
-<h2 id="small-go-lives"><a class="header" href="#small-go-lives">Small go-lives</a></h2>
+<h2 id="pros"><a class="header" href="#pros">Pros</a></h2>
 <ul>
-<li>The key for the time appetite approach is small go-lives</li>
-<li>Small go-lives makes it easy to decide to move to the next initiative or rather stay on the current one</li>
-<li>Even if an initiative has a small time appetite, something is always delivered to the stakeholders of interest</li>
-<li>Continuous Deployment helps a lot, but it is not a necessary condition</li>
-<li>Small go-lives bring many nice side effects per se:
-<ul>
-<li>Faster customer feedback</li>
-<li>Faster operational feedback (i.e. performance, bugs, observability, etc.)</li>
-<li>Reduced work in progress and cognitive load</li>
+<li>No need to create a dedicated system to handle the commercial configuration</li>
+<li>Network fault-tolerant: commercial configuration is embedded at build time</li>
+<li>Unit tests acting as a quality gateway before changes affects production</li>
+<li>Configuration changes versioned in git</li>
 </ul>
-</li>
-</ul>
-<h2 id="planning-while-delivering"><a class="header" href="#planning-while-delivering">Planning while delivering</a></h2>
+<h2 id="cons"><a class="header" href="#cons">Cons</a></h2>
 <ul>
-<li>The planning of an initiative is done before its delivery</li>
-<li>For planning we mean:
-<ul>
-<li>problem definition</li>
-<li>solution definition</li>
-<li>risks, assumptions, issues and dependencies spiking and resolution</li>
-<li>scope slicing (i.e. scope defined for each small go-live)</li>
+<li>Not custom validation possible in the GitHub web interface (e.g. invalid date format)</li>
+<li>Basic JSON file manipulation needed by non-technical roles</li>
+<li>Changes need to wait a handful of minutes to be deployed in production</li>
+<li>Non-technical roles need to create a GitHub account, per person</li>
 </ul>
-</li>
-<li>The planning is performed by
+<h1 id="note"><a class="header" href="#note">Note</a></h1>
+<h2 id="next-iterations"><a class="header" href="#next-iterations">Next iterations</a></h2>
 <ul>
-<li>Product manager</li>
-<li>UX designer</li>
-<li>Engineer champion (i.e. the engineer who coordinates the others on the initiative)</li>
+<li>If the proposed JSON approach suffer from poor UX, the content management system is likely the next step</li>
+<li>If the business configuration grows in complexity, we have identified a standalone business subdomain. This requires its own back-end system with a UI to configure the changes</li>
 </ul>
-</li>
-<li>The planning happens while delivering on another initiative:
+<h1 id="credits"><a class="header" href="#credits">Credits</a></h1>
 <ul>
-<li>be mindful of the extra work for the people involved in planning</li>
-<li>the engineer championing the current initiative should not contribute to planning the next one</li>
-</ul>
-</li>
-</ul>
-<h2 id="time-appetite-vs-estimates"><a class="header" href="#time-appetite-vs-estimates">Time appetite vs estimates</a></h2>
-<ul>
-<li>Time appetite reverses the classic approach with estimates where:
-<ul>
-<li>by guessing effort, the team define the scope to be delivered in the quarter for each initiative</li>
-<li>Team is constantly late to deliver, or worse quality is cut to respect the timeline</li>
-<li>Stakeholders are frustrated as their initiatives are late or nothing is delivered at all</li>
-</ul>
-</li>
-</ul>
-<h1 id="notes"><a class="header" href="#notes">Notes</a></h1>
-<ul>
-<li>My proposed solution is a lightweight version of the <a href="https://basecamp.com/shapeup">Shape Up approach from Basecamp</a></li>
+<li>Erik Simon: for proposing custom extensions to the content management system as an interesting alternative</li>
+<li>Lukasz Plotnicki: for helping me to simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../ways-of-working/communication-patterns-in-remote-team.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../tech/introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../tech/introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -243,13 +234,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../ways-of-working/communication-patterns-in-remote-team.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../tech/introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../tech/introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
