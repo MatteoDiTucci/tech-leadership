@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Tech Leadership</title>
+        <title>Communication patterns in remote team - Tech Leadership</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html" class="active"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html" class="active"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,21 +143,156 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<h3 id="what-is-this-book-about"><a class="header" href="#what-is-this-book-about">What is this book about</a></h3>
-<p>This book is a brain dump of tech leadership problems and my proposed solutions.<br />
-It has no pretension to be complete or perfect.
-On the contrary, following the <a href="https://meta.wikimedia.org/wiki/Cunningham%27s_Law">Cunninghams's law</a>, I expect it to be challenged so that the best solution can be actually found.</p>
-<h3 id="who-i-am"><a class="header" href="#who-i-am">Who I am</a></h3>
-<p>My name is Matteo Di Tucci, I am software engineer and tech lead at air up.</p>
-<h3 id="teach-me-back"><a class="header" href="#teach-me-back">Teach me back</a></h3>
-<p>I really appreciate any feedback about the book and my current understanding of tech leadership.
-You can share any feedback by opening a <a href="https://github.com/MatteoDiTucci/tech-leadership/issues">GitHub issue</a> or a <a href="https://github.com/MatteoDiTucci/tech-leadership/pulls">pull request</a></p>
+                        <h1 id="problem"><a class="header" href="#problem">Problem</a></h1>
+<p>How to communicate in a software delivery team to make sure:</p>
+<ul>
+<li>Everybody is aligned</li>
+<li>Feedback loop is short</li>
+<li>People have focused time</li>
+</ul>
+<h1 id="context"><a class="header" href="#context">Context</a></h1>
+<ul>
+<li>Cross-functional team</li>
+<li>Full remote with overlapping time zones</li>
+<li>Communication tools available:
+<ul>
+<li>Slack (chat)</li>
+<li>Asana (project management tool)</li>
+<li>Google Meet (synchronous meeting)</li>
+<li>Gmail (email)</li>
+</ul>
+</li>
+</ul>
+<h1 id="solution"><a class="header" href="#solution">Solution</a></h1>
+<h3 id="slack"><a class="header" href="#slack">Slack</a></h3>
+<ul>
+<li>Urgent questions only
+<ul>
+<li>Examples: you are stuck, and you can't do anything else without relevant context switching</li>
+</ul>
+</li>
+<li>Avoid direct messages
+<ul>
+<li>Even for direct questions, use the team channel as this irradiates information</li>
+<li>Examples: clarify a requirement which is blocking a user story</li>
+</ul>
+</li>
+<li>No tagging
+<ul>
+<li>Use &quot;@ person&quot;, &quot;@ channel&quot;, &quot;@ here&quot; only for urgent topics</li>
+<li>Examples: production incidents, you need an answer within an hour</li>
+<li>Team members are expected to skim through the team channel every couple of hours to triage and reply</li>
+</ul>
+</li>
+<li>Channels follow a convention
+<ul>
+<li>[department]-[team-name]</li>
+<li>Examples: #tech-bunny</li>
+</ul>
+</li>
+<li>Messages follow a convention
+<ul>
+<li>The first line is the summary</li>
+<li>If asking a direct question, put people names on top</li>
+<li>Examples:
+&quot;[Go-live: countries timeline]
+<em>Hey Nick</em>,
+Are we good to launch in Italy after France?&quot;</li>
+</ul>
+</li>
+<li>Single source of truth
+<ul>
+<li>OK to have dedicated channels for roles, but some noise is better than overspecialized channels</li>
+<li>Have a dedicated channel for external stakeholders to ask for help</li>
+</ul>
+</li>
+</ul>
+<h3 id="asana"><a class="header" href="#asana">Asana</a></h3>
+<ul>
+<li>Definition of done
+<ul>
+<li>Single source of truth for what needs to be done</li>
+<li>Crystallize any decision-making</li>
+<li>The above holds for both product and tech initiatives</li>
+</ul>
+</li>
+<li>Important, but not urgent
+<ul>
+<li>Use Slack for urgent communication</li>
+<li>Team members are expected to skim through the notifications twice a day to triage and reply</li>
+<li>Bring back decision-making from Slack and meetings to the Project Management tool</li>
+</ul>
+</li>
+<li>Every initiative has its on board
+<ul>
+<li>This board clarifies what has been done and what is left to do</li>
+<li>Tickets are organized in 3 sections: problem definition, analysis, delivery</li>
+<li>Delivery section can be broken down into multiple sections, one per go-live</li>
+</ul>
+</li>
+<li>Team delivery board
+<ul>
+<li>It visualizes the work in progress or soon to be picked up (1-2 weeks)</li>
+<li>4 columns: in-refinement, next, in-progress, done</li>
+<li>When ready to be refined, a ticket from an initiative board, is added to the team delivery board</li>
+<li>Every ticket is assigned to a person</li>
+<li>One person can't have more than 1 ticket in progress</li>
+</ul>
+</li>
+</ul>
+<h3 id="google-meet"><a class="header" href="#google-meet">Google Meet</a></h3>
+<ul>
+<li>Only for synchronous collaboration
+<ul>
+<li>Examples: initiative kick-off, retrospective</li>
+</ul>
+</li>
+<li>Use the right tool
+<ul>
+<li>Examples: Tuple for pair programming, Miro for drawing</li>
+</ul>
+</li>
+<li>Reduce recurring meetings
+<ul>
+<li>Examples: move user story refinement to async, is standup really needed?</li>
+</ul>
+</li>
+<li>Keep meetings short and focused
+<ul>
+<li>Smallest audience possible</li>
+<li>Organizer is responsible for time keeping</li>
+<li>Expected outcomes and agenda in meetings invites</li>
+<li>Everybody's calendar is up to date, so anyone invited to a meeting can change the date-time if needed</li>
+</ul>
+</li>
+</ul>
+<h3 id="gmail"><a class="header" href="#gmail">Gmail</a></h3>
+<ul>
+<li>Only to communicate with people outside the company</li>
+</ul>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<h3 id="everybody-needs-focused-time-managers-too"><a class="header" href="#everybody-needs-focused-time-managers-too">Everybody needs focused time, managers too</a></h3>
+<ul>
+<li>Decision-making requires focus</li>
+<li>Bad decisions by an engineering manager are more harmful than those made by an engineer</li>
+<li>Sorry <a href="https://paulgraham.com/makersschedule.html">Paul Graham</a></li>
+</ul>
+<h3 id="repetition-is-key"><a class="header" href="#repetition-is-key">Repetition is key</a></h3>
+<ul>
+<li>Have 1 goal at time for the team</li>
+<li>Use repetition in written and verbal communications to remind what the current goal is</li>
+<li>This simplifies decision-making and prioritization at any level</li>
+</ul>
+<h2 id="credits"><a class="header" href="#credits">Credits</a></h2>
+<p>Thanks to David Swallow, who insisted for no direct Slack tagging in our team. We were skeptical, now we love it.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../introduction/introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
                                                     <a rel="next" href="../ways-of-working/communication-patterns-in-remote-team.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
@@ -169,6 +304,9 @@ You can share any feedback by opening a <a href="https://github.com/MatteoDiTucc
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../introduction/introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
                                     <a rel="next" href="../ways-of-working/communication-patterns-in-remote-team.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
