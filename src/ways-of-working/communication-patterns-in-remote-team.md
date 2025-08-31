@@ -1,3 +1,5 @@
+# Communication Patterns in Remote Team
+
 # Problem
 How to communicate in a software delivery team to make sure:
 - Everybody is aligned

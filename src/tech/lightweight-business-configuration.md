@@ -1,3 +1,5 @@
+# Lightweight Business Configuration
+
 # Problem
 An e-commerce has some commercial configuration to update every now and then.
 For example: what products are in pre-sale, what products are under promotion, etc.
