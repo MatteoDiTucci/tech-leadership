@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Tech Leadership</title>
+        <title>Bankrupt tech debt - Tech Leadership</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">3.2.</strong> Bankrupt tech debt</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li></ol></li><li class="chapter-item expanded "><a href="../tech/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html" class="active"><strong aria-hidden="true">3.2.</strong> Bankrupt tech debt</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,45 +143,75 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<h3 id="what-is-this-book-about"><a class="header" href="#what-is-this-book-about">What is this book about</a></h3>
-<p>This book is a brain dump of tech leadership problems and my proposed solutions.<br />
-It has no pretension to be complete or perfect.
-On the contrary, following the <a href="https://meta.wikimedia.org/wiki/Cunningham%27s_Law">Cunninghams's law</a>, I expect it to be challenged so that the best solution can be actually found.</p>
-<h3 id="who-i-am"><a class="header" href="#who-i-am">Who I am</a></h3>
-<p>My name is Matteo Di Tucci, I am software engineer and tech lead at air up.</p>
-<h3 id="teach-me-back"><a class="header" href="#teach-me-back">Teach me back</a></h3>
-<p>I really appreciate any feedback about the book and my current understanding of tech leadership.
-You can share any feedback by opening a <a href="https://github.com/MatteoDiTucci/tech-leadership/issues">GitHub issue</a> or a <a href="https://github.com/MatteoDiTucci/tech-leadership/pulls">pull request</a></p>
-<h3 id="tech-leadership"><a class="header" href="#tech-leadership">Tech leadership</a></h3>
-<p>As taught me in Thoughtworks, the <em>what</em> of tech leadership is:</p>
+                        <h1 id="bankrupt-tech-debt"><a class="header" href="#bankrupt-tech-debt">Bankrupt tech debt</a></h1>
+<h1 id="problem"><a class="header" href="#problem">Problem</a></h1>
 <ul>
-<li>People cultivation</li>
-<li>Predictable delivery</li>
-<li>Stakeholders management</li>
-<li>Tech vision
-<ul>
-<li>Cross-functional requirements</li>
-<li>Target architecture</li>
-<li>Tech principles</li>
-<li>Tech radar</li>
+<li>There is a board which is a graveyard of tech debt tickets.</li>
+<li>Nobody knows what is in there and what it is important to work on.</li>
 </ul>
-</li>
-</ul>
-<p>The <em>how</em> is:</p>
+<h1 id="context"><a class="header" href="#context">Context</a></h1>
 <ul>
-<li><a href="../ways-of-working/introduction.html">Ways of working</a></li>
-<li><a href="../tech/introduction.html">Tech</a></li>
+<li>The tech debt board is shared across multiple teams</li>
+<li>Whenever tech debt is recognized, a new ticket is added to the board and forgotten</li>
+<li>Cyclically, some engineer tries to organize and prioritize the board, but soon it becomes stale again</li>
+<li>All engineers are responsible, which means nobody is responsible</li>
+</ul>
+<h1 id="solution"><a class="header" href="#solution">Solution</a></h1>
+<ul>
+<li>Each engineer picks one tech debt ticket and champions it to completion within the next 2 weeks</li>
+<li>Declare bankruptcy on the tech debt board, as in: delete it and forget about it</li>
+<li>From now on, when planning a new initiative, any relevant tech debt is identified and worked on as part of the initiative itself</li>
+</ul>
+<h2 id="when-to-work-on-tech-debt"><a class="header" href="#when-to-work-on-tech-debt">When to work on tech debt</a></h2>
+<ul>
+<li>Tech debt can be tackled before, during or after the go-live of an initiative: it does not matter</li>
+<li>What matters is that a new initiative cannot start until all tech debt of the previous one has been covered</li>
+</ul>
+<h2 id="tech-debt-vs-deadlines"><a class="header" href="#tech-debt-vs-deadlines">Tech debt vs deadlines</a></h2>
+<ul>
+<li>It is fine to create new tech debt to respect a deadline</li>
+<li>However, the tech debt must be recouped before starting a new initiative</li>
+</ul>
+<h2 id="how-much-tech-debt"><a class="header" href="#how-much-tech-debt">How much tech debt</a></h2>
+<ul>
+<li>Perfect is enemy of good: we do not need to completely remove all the tech debt related to an initiative</li>
+<li>However, after an initiative is completed, we need to be in a better state than before starting it</li>
+<li>If the remaining tech debt is relevant, it will soon pop up again as part of a new initiative</li>
+</ul>
+<h2 id="important-tech-debt-cant-be-lost"><a class="header" href="#important-tech-debt-cant-be-lost">Important tech debt can't be lost</a></h2>
+<ul>
+<li>Do not fear to lose track of important tech debt because of declaring bankruptcy</li>
+<li>If a piece of tech debt is important, it will be evident as part of the analysis of a new initiative</li>
+</ul>
+<h2 id="tech-debt-is-not-tech-work"><a class="header" href="#tech-debt-is-not-tech-work">Tech debt is not tech work</a></h2>
+<ul>
+<li>An initiative can be either product work or tech work</li>
+<li>Tech work is what is needed to keep systems operational, not matter if they are customer-facing or internal</li>
+<li>So tech work not tech debt, and it should be delivered mixed with product work through any given interval of time (e.g. 80/20 product/tech work split)</li>
+</ul>
+<h1 id="discarded-solutions"><a class="header" href="#discarded-solutions">Discarded solutions</a></h1>
+<h3 id="quarter-tech-debt"><a class="header" href="#quarter-tech-debt">Quarter tech debt</a></h3>
+<ul>
+<li>Here tech debt is bankrupted at the end of each quarter</li>
+<li>We are back to the original problem. However, by setting an expiration date on, we do not cumulate stale tech debt forever</li>
+<li>This might be a good intermediate step before adopting the proposed solution</li>
+</ul>
+<h3 id="tech-debt-board-kept-up-to-date"><a class="header" href="#tech-debt-board-kept-up-to-date">Tech debt board kept up to date</a></h3>
+<ul>
+<li>There is a recurring meeting where all engineers or at least the tech leads go through the tech debt board and prioritize it</li>
+<li>This approach is very expensive in terms of time and cognitive load as the board keeps growing through time</li>
+<li>This is better than just having a graveyard tech board where nobody is responsible</li>
+<li>However, the lack of an expiration date makes it an ever-increasing burden for the responsible engineers</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
-                                                    <a rel="next" href="../ways-of-working/introduction.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                                                    <a rel="prev" href="../tech/lightweight-business-configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+                        
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -189,10 +219,10 @@ You can share any feedback by opening a <a href="https://github.com/MatteoDiTucc
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-                                    <a rel="next" href="../ways-of-working/introduction.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                                    <a rel="prev" href="../tech/lightweight-business-configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+                
                             </nav>
 
         </div>
