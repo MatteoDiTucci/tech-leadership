@@ -6,3 +6,4 @@
     - [Next quarter planning](ways-of-working/next-quarter-planning.md)
 - [Tech](tech/introduction.md)
     - [Lightweight business configuration](tech/lightweight-business-configuration.md)
+    - [Bankrupt tech debt](ways-of-working/bankrupt-tech-debt.md)
