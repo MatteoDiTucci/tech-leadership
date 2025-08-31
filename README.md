@@ -1,4 +1,4 @@
-# Tech Leadership
+# Tech Leadership: I'll go first
 
 ![CI/CD](https://github.com/matteoditucci/tech-leadership/workflows/github-pages/badge.svg)
 
