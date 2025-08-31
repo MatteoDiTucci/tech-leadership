@@ -9,6 +9,8 @@ https://tech-leadership.matteoditucci.com/
 Feel free to open a pull request if you want to provide any feedback. Thank you for that.
 
 ### Current status
+I started this book at the end of August 2024.
+I aim to publish a new chapter every 10 days approximately.
 
 ### Tech stack
 * Layout: [mdBook](https://github.com/rust-lang/mdBook)
