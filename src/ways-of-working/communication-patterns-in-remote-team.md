@@ -1,12 +1,12 @@
 # Communication Patterns in Remote Team
 
-# Problem
+## Problem
 How to communicate in a software delivery team to make sure:
 - Everybody is aligned
 - Feedback loop is short
 - People have focused time
 
-# Context
+## Context
 - Cross-functional team
 - Full remote with overlapping time zones
 - Communication tools available:
@@ -15,8 +15,8 @@ How to communicate in a software delivery team to make sure:
     - Google Meet (synchronous meeting)
     - Gmail (email)
 
-# Solution
-### Slack
+## Solution
+#### Slack
 - Urgent questions only
     - Examples: you are stuck, and you can't do anything else without relevant context switching
 - Avoid direct messages
@@ -40,7 +40,7 @@ How to communicate in a software delivery team to make sure:
     - OK to have dedicated channels for roles, but some noise is better than overspecialized channels
     - Have a dedicated channel for external stakeholders to ask for help
 
-### Asana
+#### Asana
 - Definition of done
     - Single source of truth for what needs to be done
     - Crystallize any decision-making
@@ -61,7 +61,7 @@ How to communicate in a software delivery team to make sure:
     - One person can't have more than 1 ticket in progress
 
 
-### Google Meet
+#### Google Meet
 - Only for synchronous collaboration
     - Examples: initiative kick-off, retrospective
 - Use the right tool
@@ -75,7 +75,7 @@ How to communicate in a software delivery team to make sure:
     - Everybody's calendar is up to date, so anyone invited to a meeting can change the date-time if needed
 
 
-### Gmail
+#### Gmail
 - Only to communicate with people outside the company
 
 ## Notes
