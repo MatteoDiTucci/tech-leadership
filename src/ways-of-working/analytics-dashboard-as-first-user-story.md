@@ -1,32 +1,38 @@
 # Analytics dashboard as first user story
 
 ## Problem
-A new feature goes live, and endless discussions follow about how to measure success.  
-At the beginning is just: revenue or conversion rate?
-Soon it escalates to complex metrics, customer segments definition, marketing effects, etc.
+After a go-live, the delivery team finds measuring success harder than expected.  
+Building the analytics dashboard reveals gaps in tracking capabilities and overlooked external variables.
 
 ## Context
-When planning a new product initiative, success criteria seem clear.
-Usually, the initiative is part of a well-defined business objective with its quantified key results.
+When planning a new initiative, success criteria seem clear.  
+Usually, the initiative is part of a well-defined business objective with its quantified key results.  
+Everything looks straightforward because at this stage the initiative is in isolation.
 
-However, when building analytics dashboards after the go-live, often two problems arise:
-- It is hard to measure the impact of a single feature in isolation
-- Some tracking capabilities are missing to measure the success criteria
+Once live, things get harder.  
+The initiative is now part of a complex system with many variables affecting the same metrics.  
+For example, data tracking can be too corse grained or an ongoing marketing campaign can skew the results.
 
 ## Solution
-For any product or tech initiative, the first user story is to build the analytics dashboard measuring the success criteria.
-This brings the following benefits:
-- Hard conversations (e.g. revenue cannibalization) start earlier
-- Missing tracking capabilities do not increase scope unexpectedly close to go-live
-- No retrofitting success criteria to what is measured or can be measured after go-live
+The first user story of an initiative is to build the analytics dashboard.
+This dashboard encodes the success criteria of the initiative.   
+The benefits are:
+- Hard conversations start earlier, for example how to detect revenue cannibalization
+- Tracking gaps surface sooner, so they do not increase scope unexpectedly just before to go-live
+- More trustworthy success criteria, as there is no retrofitting to what is measured after go-live
 
 ### A/B testing
 Sometimes the difficulty of defining the analytics dashboard makes it clear that an A/B test is needed.  
 Understanding this close to go-live, or worse after it, can be very costly.
 
-### Human behavior
-Despite monetary metrics look very appealing on analytics dashboard, the real success criteria must be related to human behavior.  
-Generating revenue is the side effect of changing human behavior, hopefully for the better.
-
 ## Notes
-- For analytics dashboards we mean something like [Mixpanel](https://mixpanel.com) for product initiatives or [Datadog](https://www.datadoghq.com/) for tech ones
+
+### Analytics dashboard for tech initiatives
+Analytics dashboard are fundamental for product initiatives as for tech ones.  
+In terms of tools, product analytics dashboards often take the form of something like [Mixpanel](https://mixpanel.com),
+while tech dashboards of something like [Datadog](https://www.datadoghq.com/).
+
+### Users behavior as success criteria
+For product initiatives, the best success criteria are the ones proving a change in users behavior.  
+Generating revenue is just a side effect of changing users behavior, hopefully for the better.  
+On top of this, profitability needs to be accounted for as well. 
