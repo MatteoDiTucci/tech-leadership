@@ -1,2 +1,0 @@
-- Generali quotation API debug dashboard with logs
-- Cart refactoring tech reporting
