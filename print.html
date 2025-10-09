@@ -474,14 +474,45 @@ while tech dashboards of something like <a href="https://www.datadoghq.com/">Dat
 Generating revenue is just a side effect of changing users behavior, hopefully for the better.<br />
 On top of this, profitability needs to be accounted for as well. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="no-recurring-meetings"><a class="header" href="#no-recurring-meetings">No recurring meetings</a></h1>
+<h2 id="problem-4"><a class="header" href="#problem-4">Problem</a></h2>
+<p>Few team members really contribute in team ceremonies.<br />
+Most are passive or provide low value input.</p>
+<h2 id="context-4"><a class="header" href="#context-4">Context</a></h2>
+<p>This problem applies to both remote and co-located teams.</p>
+<p>Following are some examples of how the problem manifests itself:</p>
+<ul>
+<li>Standup becomes a status update. People are peer pressured to say something even if they already aligned asynchronously</li>
+<li>Demo has either missing key stakeholders, or they provide disrupting feedback that lead to significant rework</li>
+<li>User story refinement have 2 people discussing and all the rest sleeping</li>
+</ul>
+<h2 id="solution-4"><a class="header" href="#solution-4">Solution</a></h2>
+<p>Delete all recurring events from the team calendar.<br />
+Schedule meetings when needed.</p>
+<h3 id="standup"><a class="header" href="#standup">Standup</a></h3>
+<p>If team members cannot do their work without standup, the team ways of working are broken.<br />
+Improve over the 3 principles of: visualization of work, definition of done, short feedback loops.</p>
+<h3 id="user-story-refinement"><a class="header" href="#user-story-refinement">User story refinement</a></h3>
+<p>Assign one representative per role (e.g. product owner, UX designer, engineer) to each user story.<br />
+Let them refine the user story asynchronously.<br />
+They will set on demand meetings when the deem pairing necessary.</p>
+<h3 id="demo"><a class="header" href="#demo">Demo</a></h3>
+<p>Schedule a demo meeting as soon as the team has something to show to get feedback.<br />
+Invite only relevant stakeholders.<br />
+Do not accumulate work in progress for a generic demo meeting.</p>
+<h3 id="retrospective"><a class="header" href="#retrospective">Retrospective</a></h3>
+<p>This is the only recurring meeting worth to have.<br />
+It is a safety net against human arrogance to believe we are always the best version of ourselves.</p>
+<h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
+<p>Recurring meetings are not evil per se, and they are definitely helpful in chaotic environments. However, they are a crutch.<br />
+High performing teams should have meetings adapting to their rhythm, not the other way around.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tech"><a class="header" href="#tech">Tech</a></h1>
 <p>The <a href="https://wiki.c2.com/?XpSimplicityRules">simplicity rules</a> which we learn for coding, apply to systems design too.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lightweight-business-configuration"><a class="header" href="#lightweight-business-configuration">Lightweight Business Configuration</a></h1>
-<h2 id="problem-4"><a class="header" href="#problem-4">Problem</a></h2>
+<h2 id="problem-5"><a class="header" href="#problem-5">Problem</a></h2>
 <p>An e-commerce has some commercial configuration to update every now and then.
 For example: what products are in pre-sale, what products are under promotion, etc.</p>
 <p>How to enable non-technical roles to update such configuration with minimal effort?</p>
-<h2 id="context-4"><a class="header" href="#context-4">Context</a></h2>
+<h2 id="context-5"><a class="header" href="#context-5">Context</a></h2>
 <ul>
 <li>Update frequency: once a day</li>
 <li>Data to change: a handful of products SKU or dates</li>
@@ -504,7 +535,7 @@ For example: what products are in pre-sale, what products are under promotion, e
 </ul>
 </li>
 </ul>
-<h2 id="solution-4"><a class="header" href="#solution-4">Solution</a></h2>
+<h2 id="solution-5"><a class="header" href="#solution-5">Solution</a></h2>
 <p>Non-technical roles change configuration autonomously using GitHub web interface.
 <img width="1596" height="333" alt="image" src="https://github.com/user-attachments/assets/7d232fb5-ed50-4efc-aadd-e7d0bab997b4" /></p>
 <h3 id="security"><a class="header" href="#security">Security</a></h3>
@@ -545,17 +576,17 @@ This requires its own back-end system with a UI to configure the changes.</p>
 <li>Lukasz Plotnicki: for helping me to simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="long-lasting-tech-initiative"><a class="header" href="#long-lasting-tech-initiative">Long lasting tech initiative</a></h1>
-<h2 id="problem-5"><a class="header" href="#problem-5">Problem</a></h2>
+<h2 id="problem-6"><a class="header" href="#problem-6">Problem</a></h2>
 <p>Several weeks are set aside for a tech initiative.<br />
 The changes are invisible outside the codebase, so it is hard to define success and communicate progress to stakeholders.</p>
-<h2 id="context-5"><a class="header" href="#context-5">Context</a></h2>
+<h2 id="context-6"><a class="header" href="#context-6">Context</a></h2>
 <p>Examples of long-lasting tech initiatives are:</p>
 <ul>
 <li>refactoring an e-commerce cart logic as it is too complex and slow</li>
 <li>migrating the integration layer with a content management system</li>
 <li>improve the continuous deployment pipeline as it is too slow</li>
 </ul>
-<h2 id="solution-5"><a class="header" href="#solution-5">Solution</a></h2>
+<h2 id="solution-6"><a class="header" href="#solution-6">Solution</a></h2>
 <p>Treat tech initiatives exactly like products ones. Artifacts are different, but the lifecycle is the same.<br />
 Stakeholders can be inside and outside the team, sometimes are simply the engineers maintaining a system.</p>
 <h3 id="problem-definition"><a class="header" href="#problem-definition">Problem definition</a></h3>
@@ -582,7 +613,7 @@ For example:</p>
 <p>The artifacts that define success reflects the progress of the initiative so far.<br />
 Ideally this is automatically shown, for instance in the case of observability dashboards.<br />
 Other times, they need to be updated manually, like with architecture diagrams.</p>
-<h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
+<h2 id="notes-4"><a class="header" href="#notes-4">Notes</a></h2>
 <p>Codifying the definition of success in shared and evolving artifacts has two benefits.<br />
 The most important one is exposing a shared mental model across the engineers working on the initiative.<br />
 Secondly, it is an effective way to communicate with stakeholders.</p>
