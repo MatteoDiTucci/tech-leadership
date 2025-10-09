@@ -6,5 +6,5 @@
     - [Next quarter planning](ways-of-working/next-quarter-planning.md)
     - [Bankrupt tech debt](ways-of-working/bankrupt-tech-debt.md)
     - [Analytics dashboard as first user story](ways-of-working/analytics-dashboard-as-first-user-story.md)
-- [Tech](tech/introduction.md)
-    - [Lightweight business configuration](tech/lightweight-business-configuration.md)
+- [Tech](tech-expertise/introduction.md)
+    - [Lightweight business configuration](tech-expertise/lightweight-business-configuration.md)

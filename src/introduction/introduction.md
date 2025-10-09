@@ -26,4 +26,4 @@ As taught me in Thoughtworks, the *what* of tech leadership is:
 
 The *how* is:
 - [Ways of working](../ways-of-working/introduction.md)
-- [Tech](../tech/introduction.md)
+- [Tech expertise](../tech-expertise/introduction.md)
