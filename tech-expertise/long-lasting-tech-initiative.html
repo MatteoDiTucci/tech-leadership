@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Bankrupt tech debt - Tech Leadership: I&#x27;ll go first</title>
+        <title>Long lasting tech initiative - Tech Leadership: I&#x27;ll go first</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html" class="active"><strong aria-hidden="true">2.3.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.4.</strong> Analytics dashboard as first user story</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.3.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.4.</strong> Analytics dashboard as first user story</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html" class="active"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,62 +143,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="bankrupt-tech-debt"><a class="header" href="#bankrupt-tech-debt">Bankrupt tech debt</a></h1>
+                        <h1 id="long-lasting-tech-initiative"><a class="header" href="#long-lasting-tech-initiative">Long lasting tech initiative</a></h1>
 <h2 id="problem"><a class="header" href="#problem">Problem</a></h2>
-<p>There is a board which is a graveyard of tech debt tickets.<br />
-Nobody knows what is in there and what it is important to work on.</p>
+<p>Several weeks are set aside for a tech initiative.<br />
+The changes are invisible outside the codebase, so it is hard to define success and communicate progress to stakeholders.</p>
 <h2 id="context"><a class="header" href="#context">Context</a></h2>
+<p>Examples of long-lasting tech initiatives are:</p>
 <ul>
-<li>The tech debt board is shared across multiple teams</li>
-<li>Whenever tech debt is recognized, a new ticket is added to the board and forgotten</li>
-<li>Cyclically, some engineer tries to organize and prioritize the board, but soon it becomes stale again</li>
-<li>All engineers are responsible, which means nobody is responsible</li>
+<li>refactoring an e-commerce cart logic as it is too complex and slow</li>
+<li>migrating the integration layer with a content management system</li>
+<li>improve the continuous deployment pipeline as it is too slow</li>
 </ul>
 <h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
+<p>Treat tech initiatives exactly like products ones. Artifacts are different, but the lifecycle is the same.<br />
+Stakeholders can be inside and outside the team, sometimes are simply the engineers maintaining a system.</p>
+<h3 id="problem-definition"><a class="header" href="#problem-definition">Problem definition</a></h3>
+<p>Get the stakeholders together to define:</p>
 <ul>
-<li>Each engineer picks one tech debt ticket and champions it to completion within the next 2 weeks</li>
-<li>Declare bankruptcy on the tech debt board, as in: delete it and forget about it</li>
-<li>From now on, when planning a new initiative, any relevant tech debt is identified and worked on as part of the initiative itself</li>
+<li>what is the problem</li>
+<li>who is impacting</li>
+<li>what are the consequences</li>
+<li>initial risk, assumption, issues, dependencies (RAIDs)</li>
 </ul>
-<h3 id="when-to-work-on-tech-debt"><a class="header" href="#when-to-work-on-tech-debt">When to work on tech debt</a></h3>
-<p>Tech debt can be tackled before, during or after the go-live of an initiative: it does not matter.<br />
-What matters is that a new initiative cannot start until all tech debt of the previous one has been covered</p>
-<h3 id="tech-debt-vs-deadlines"><a class="header" href="#tech-debt-vs-deadlines">Tech debt vs deadlines</a></h3>
-<p>It is fine to create new tech debt to respect a deadline.
-However, the tech debt must be recouped before starting a new initiative</p>
-<h3 id="how-much-tech-debt"><a class="header" href="#how-much-tech-debt">How much tech debt</a></h3>
-<p>Perfect is enemy of good: we do not need to completely remove all the tech debt related to an initiative.<br />
-However, after an initiative is completed, we need to be in a better state than before starting it.<br />
-If the remaining tech debt is relevant, it will soon pop up again as part of a new initiative</p>
-<h3 id="important-tech-debt-cant-be-lost"><a class="header" href="#important-tech-debt-cant-be-lost">Important tech debt can't be lost</a></h3>
-<p>Do not fear to lose track of important tech debt because of declaring bankruptcy.<br />
-If a piece of tech debt is important, it will be evident as part of the analysis of a new initiative</p>
-<h3 id="tech-debt-is-not-tech-work"><a class="header" href="#tech-debt-is-not-tech-work">Tech debt is not tech work</a></h3>
-<p>An initiative can be either product work or tech work.<br />
-Tech work is what is needed to keep systems operational, not matter if they are customer-facing or internal.<br />
-So tech work not tech debt, and it should be delivered mixed with product work through any given interval of time (e.g. 80/20 product/tech work split)</p>
-<h2 id="discarded-solutions"><a class="header" href="#discarded-solutions">Discarded solutions</a></h2>
-<h4 id="quarter-tech-debt"><a class="header" href="#quarter-tech-debt">Quarter tech debt</a></h4>
-<p>Here tech debt is bankrupted at the end of each quarter.<br />
-We are back to the original problem. However, by setting an expiration date on, we do not cumulate stale tech debt forever.<br />
-This might be a good intermediate step before adopting the proposed solution</p>
-<h4 id="tech-debt-board-kept-up-to-date"><a class="header" href="#tech-debt-board-kept-up-to-date">Tech debt board kept up to date</a></h4>
-<p>There is a recurring meeting where all engineers or at least the tech leads go through the tech debt board and prioritize it.<br />
-This approach is very expensive in terms of time and cognitive load as the board keeps growing through time.<br />
-This is better than just having a graveyard tech board where nobody is responsible.<br />
-However, the lack of an expiration date makes it an ever-increasing burden for the responsible engineers.</p>
+<h3 id="analysis"><a class="header" href="#analysis">Analysis</a></h3>
+<p>Analyze the problem and compare different solutions.<br />
+Leverage technical spikes to update the RAIDs.<br />
+If the problem is complex rather than complicated, start from anywhere and course correct as more information is gained.</p>
+<h3 id="definition-of-success"><a class="header" href="#definition-of-success">Definition of success</a></h3>
+<p>The definition of success must be codified in artifacts accessible to everybody and that can evolve with time.
+For example:</p>
+<ul>
+<li>Current state and target state of a system in the form of diagrams</li>
+<li>Observability dashboard with key metrics (e.g. performance, number of errors, number of dependencies, number of invocations, etc.)</li>
+</ul>
+<p>This must be done as the very first user story of the initiative.</p>
+<h3 id="communicate-progress"><a class="header" href="#communicate-progress">Communicate progress</a></h3>
+<p>The artifacts that define success reflects the progress of the initiative so far.<br />
+Ideally this is automatically shown, for instance in the case of observability dashboards.<br />
+Other times, they need to be updated manually, like with architecture diagrams.</p>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<p>Codifying the definition of success in shared and evolving artifacts has two benefits.<br />
+The most important one is exposing a shared mental model across the engineers working on the initiative.<br />
+Secondly, it is an effective way to communicate with stakeholders.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../ways-of-working/next-quarter-planning.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../tech-expertise/lightweight-business-configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../ways-of-working/analytics-dashboard-as-first-user-story.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -206,13 +201,10 @@ However, the lack of an expiration date makes it an ever-increasing burden for t
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../ways-of-working/next-quarter-planning.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../tech-expertise/lightweight-business-configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../ways-of-working/analytics-dashboard-as-first-user-story.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>

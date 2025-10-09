@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.3.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.4.</strong> Analytics dashboard as first user story</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.1.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.2.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.3.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.4.</strong> Analytics dashboard as first user story</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -543,6 +543,48 @@ This requires its own back-end system with a UI to configure the changes.</p>
 <li>Erik Simon: for proposing custom extensions to the content management system as an interesting alternative</li>
 <li>Lukasz Plotnicki: for helping me to simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="long-lasting-tech-initiative"><a class="header" href="#long-lasting-tech-initiative">Long lasting tech initiative</a></h1>
+<h2 id="problem-5"><a class="header" href="#problem-5">Problem</a></h2>
+<p>Several weeks are set aside for a tech initiative.<br />
+The changes are invisible outside the codebase, so it is hard to define success and communicate progress to stakeholders.</p>
+<h2 id="context-5"><a class="header" href="#context-5">Context</a></h2>
+<p>Examples of long-lasting tech initiatives are:</p>
+<ul>
+<li>refactoring an e-commerce cart logic as it is too complex and slow</li>
+<li>migrating the integration layer with a content management system</li>
+<li>improve the continuous deployment pipeline as it is too slow</li>
+</ul>
+<h2 id="solution-5"><a class="header" href="#solution-5">Solution</a></h2>
+<p>Treat tech initiatives exactly like products ones. Artifacts are different, but the lifecycle is the same.<br />
+Stakeholders can be inside and outside the team, sometimes are simply the engineers maintaining a system.</p>
+<h3 id="problem-definition"><a class="header" href="#problem-definition">Problem definition</a></h3>
+<p>Get the stakeholders together to define:</p>
+<ul>
+<li>what is the problem</li>
+<li>who is impacting</li>
+<li>what are the consequences</li>
+<li>initial risk, assumption, issues, dependencies (RAIDs)</li>
+</ul>
+<h3 id="analysis"><a class="header" href="#analysis">Analysis</a></h3>
+<p>Analyze the problem and compare different solutions.<br />
+Leverage technical spikes to update the RAIDs.<br />
+If the problem is complex rather than complicated, start from anywhere and course correct as more information is gained.</p>
+<h3 id="definition-of-success"><a class="header" href="#definition-of-success">Definition of success</a></h3>
+<p>The definition of success must be codified in artifacts accessible to everybody and that can evolve with time.
+For example:</p>
+<ul>
+<li>Current state and target state of a system in the form of diagrams</li>
+<li>Observability dashboard with key metrics (e.g. performance, number of errors, number of dependencies, number of invocations, etc.)</li>
+</ul>
+<p>This must be done as the very first user story of the initiative.</p>
+<h3 id="communicate-progress"><a class="header" href="#communicate-progress">Communicate progress</a></h3>
+<p>The artifacts that define success reflects the progress of the initiative so far.<br />
+Ideally this is automatically shown, for instance in the case of observability dashboards.<br />
+Other times, they need to be updated manually, like with architecture diagrams.</p>
+<h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
+<p>Codifying the definition of success in shared and evolving artifacts has two benefits.<br />
+The most important one is exposing a shared mental model across the engineers working on the initiative.<br />
+Secondly, it is an effective way to communicate with stakeholders.</p>
 
                     </main>
 
