@@ -8,3 +8,4 @@
     - [Analytics dashboard as first user story](ways-of-working/analytics-dashboard-as-first-user-story.md)
 - [Tech](tech-expertise/introduction.md)
     - [Lightweight business configuration](tech-expertise/lightweight-business-configuration.md)
+    - [Long lasting tech initiative](tech-expertise/long-lasting-tech-initiative.md)
