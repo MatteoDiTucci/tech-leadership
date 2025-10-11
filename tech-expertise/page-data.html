@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Long lasting tech initiative - Tech Leadership: I&#x27;ll go first</title>
+        <title>Page data - Tech Leadership: I&#x27;ll go first</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.4.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.5.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html" class="active"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="../tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.4.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.5.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="../tech-expertise/page-data.html" class="active"><strong aria-hidden="true">3.3.</strong> Page data</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,60 +143,60 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="long-lasting-tech-initiative"><a class="header" href="#long-lasting-tech-initiative">Long lasting tech initiative</a></h1>
+                        <h1 id="page-data"><a class="header" href="#page-data">Page data</a></h1>
 <h2 id="problem"><a class="header" href="#problem">Problem</a></h2>
-<p>Several weeks are set aside for a tech initiative.<br />
-The changes are invisible outside the codebase, so it is hard to define success and communicate progress to stakeholders.</p>
+<p>A page component in a single page application fetches data from different external systems.<br />
+Page's unit tests get more complex as the page functionalities increase.<br />
+This happens because unit tests are coupled to the internals of how data are fetched and transformed.</p>
 <h2 id="context"><a class="header" href="#context">Context</a></h2>
-<p>Examples of long-lasting tech initiatives are:</p>
 <ul>
-<li>refactoring an e-commerce cart logic as it is too complex and slow</li>
-<li>migrating the integration layer with a content management system</li>
-<li>improve the continuous deployment pipeline as it is too slow</li>
+<li>The page is a Next.js server side component</li>
+<li>External systems are for instance: content management system (CMS) and product service</li>
+<li>The external systems can be queried multiple times, for instance: fetch different components from the CMS</li>
+<li>Page unit tests are written in react-testing-library, test framework is Vitest</li>
+<li>Mocking capabilities are provided by Vitest</li>
+<li>When page unit tests fail, it is very difficult to understand what Vitest mock needs to be fixed</li>
 </ul>
 <h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
-<p>Treat tech initiatives exactly like products ones. Artifacts are different, but the lifecycle is the same.<br />
-Stakeholders can be inside and outside the team, sometimes are simply the engineers maintaining a system.</p>
-<h3 id="problem-definition"><a class="header" href="#problem-definition">Problem definition</a></h3>
-<p>Get the stakeholders together to define:</p>
+<p>Extract all the page data fetching and transformation into a single <code>getPageData()</code> function.
+Now we can:</p>
 <ul>
-<li>what is the problem</li>
-<li>who is impacting</li>
-<li>what are the consequences</li>
-<li>initial risk, assumption, issues, dependencies (RAIDs)</li>
+<li>Unit test <code>getPageData()</code> without the complexity of the UI (just Vitest, no react-testing-library)</li>
+<li>Unit test the page by only faking <code>getPageData()</code></li>
 </ul>
-<h3 id="analysis"><a class="header" href="#analysis">Analysis</a></h3>
-<p>Analyze the problem and compare different solutions.<br />
-Leverage technical spikes to update the RAIDs.<br />
-If the problem is complex rather than complicated, start from anywhere and course correct as more information is gained.</p>
-<h3 id="definition-of-success"><a class="header" href="#definition-of-success">Definition of success</a></h3>
-<p>The definition of success must be codified in artifacts accessible to everybody and that can evolve with time.
-For example:</p>
-<ul>
-<li>Current state and target state of a system in the form of diagrams</li>
-<li>Observability dashboard with key metrics (e.g. performance, number of errors, number of dependencies, number of invocations, etc.)</li>
-</ul>
-<p>This must be done as the very first user story of the initiative.</p>
-<h3 id="communicate-progress"><a class="header" href="#communicate-progress">Communicate progress</a></h3>
-<p>The artifacts that define success reflects the progress of the initiative so far.<br />
-Ideally this is automatically shown, for instance in the case of observability dashboards.<br />
-Other times, they need to be updated manually, like with architecture diagrams.</p>
+<h3 id="getpagedata-function"><a class="header" href="#getpagedata-function">GetPageData function</a></h3>
+<p>An example of such function can be:</p>
+<pre><code>export const getHomePageData = (locale: Locale) =&gt; {
+    const homePageContent = cmsClient().getHomePage() 
+    const footer = cmsClient().getFooter() 
+    const productRecommendations = productService().getReccomendations() 
+    
+    return {
+        footer,
+        heroImage: homePageContent.heroImage,
+        productRecommendations,
+        title: homePageContent.title
+    }
+} 
+</code></pre>
+<p>Unit tests for <code>getPageData()</code> will fake <code>cmsClient()</code> and <code>productService()</code>.
+Page unit test will only fake <code>getPageData()</code>.</p>
+<h3 id="single-responsibility"><a class="header" href="#single-responsibility">Single responsibility</a></h3>
+<p>The responsibility of fetching and transforming data is extracted into <code>getPageData()</code>.<br />
+This means the page can go back to its main responsibility: presentation through component composition.</p>
 <h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
-<p>Codifying the definition of success in shared and evolving artifacts has two benefits.<br />
-The most important one is exposing a shared mental model across the engineers working on the initiative.<br />
-Secondly, it is an effective way to communicate with stakeholders.</p>
+<h3 id="back-end-for-front-end"><a class="header" href="#back-end-for-front-end">Back-end for front-end</a></h3>
+<p>The <code>getPageData()</code> function can be thought as a tiny back-end-for-front-end.<br />
+Each page has its own <code>getPageData()</code>, for instance: <code>getHomePageData()</code>, <code>getProductListPageData()</code>, etc.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../tech-expertise/lightweight-business-configuration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../tech-expertise/long-lasting-tech-initiative.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../tech-expertise/page-data.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -204,13 +204,10 @@ Secondly, it is an effective way to communicate with stakeholders.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../tech-expertise/lightweight-business-configuration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../tech-expertise/long-lasting-tech-initiative.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../tech-expertise/page-data.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
