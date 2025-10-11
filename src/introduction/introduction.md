@@ -1,5 +1,8 @@
 # Introduction
 
+### Current status
+In progress: publishing a new chapter roughly every week.
+
 ### What is this book about
 This book is a brain dump of tech leadership problems and my proposed solutions.  
 It has no pretension to be complete or perfect.
