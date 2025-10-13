@@ -621,14 +621,14 @@ The most important one is exposing a shared mental model across the engineers wo
 Secondly, it is an effective way to communicate with stakeholders.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="page-data"><a class="header" href="#page-data">Page data</a></h1>
 <h2 id="problem-7"><a class="header" href="#problem-7">Problem</a></h2>
-<p>A page component in a single page application fetches data from different external systems.<br />
-Page's unit tests get more complex as the page functionalities increase.<br />
+<p>In a single page application, a page fetches data from different external systems.<br />
+Adding new functionalities to the page gets harder because the unit tests are increasingly complex around faking external systems.<br />
 This happens because unit tests are coupled to the internals of how data are fetched and transformed.</p>
 <h2 id="context-7"><a class="header" href="#context-7">Context</a></h2>
 <ul>
 <li>The page is a Next.js server side component</li>
 <li>External systems are for instance: content management system (CMS) and product service</li>
-<li>The external systems can be queried multiple times, for instance: fetch different components from the CMS</li>
+<li>The external systems are queried multiple times, for instance: fetch different components from the CMS</li>
 <li>Page unit tests are written in react-testing-library, test framework is Vitest</li>
 <li>Mocking capabilities are provided by Vitest</li>
 <li>When page unit tests fail, it is very difficult to understand what Vitest mock needs to be fixed</li>
@@ -659,7 +659,7 @@ Now we can:</p>
 Page unit test will only fake <code>getPageData()</code>.</p>
 <h3 id="single-responsibility"><a class="header" href="#single-responsibility">Single responsibility</a></h3>
 <p>The responsibility of fetching and transforming data is extracted into <code>getPageData()</code>.<br />
-This means the page can go back to its main responsibility: presentation through component composition.</p>
+This means the page can go back to its main responsibility: presentation through components composition.</p>
 <h2 id="notes-5"><a class="header" href="#notes-5">Notes</a></h2>
 <h3 id="back-end-for-front-end"><a class="header" href="#back-end-for-front-end">Back-end for front-end</a></h3>
 <p>The <code>getPageData()</code> function can be thought as a tiny back-end-for-front-end.<br />
