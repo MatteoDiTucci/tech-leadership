@@ -1,14 +1,14 @@
 # Page data
 
 ## Problem
-A page component in a single page application fetches data from different external systems.  
-Page's unit tests get more complex as the page functionalities increase.  
+In a single page application, a page fetches data from different external systems.  
+Adding new functionalities to the page gets harder because the unit tests are increasingly complex around faking external systems.  
 This happens because unit tests are coupled to the internals of how data are fetched and transformed.
 
 ## Context
 - The page is a Next.js server side component
 - External systems are for instance: content management system (CMS) and product service
-- The external systems can be queried multiple times, for instance: fetch different components from the CMS
+- The external systems are queried multiple times, for instance: fetch different components from the CMS
 - Page unit tests are written in react-testing-library, test framework is Vitest
 - Mocking capabilities are provided by Vitest
 - When page unit tests fail, it is very difficult to understand what Vitest mock needs to be fixed
@@ -41,7 +41,7 @@ Page unit test will only fake `getPageData()`.
 
 ### Single responsibility
 The responsibility of fetching and transforming data is extracted into `getPageData()`.   
-This means the page can go back to its main responsibility: presentation through component composition.
+This means the page can go back to its main responsibility: presentation through components composition.
 
 ## Notes
 
