@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.4.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.5.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.4.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.5.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting automate the-boring</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -664,6 +664,65 @@ This means the page can go back to its main responsibility: presentation through
 <h3 id="back-end-for-front-end"><a class="header" href="#back-end-for-front-end">Back-end for front-end</a></h3>
 <p>The <code>getPageData()</code> function can be thought as a tiny back-end-for-front-end.<br />
 Each page has its own <code>getPageData()</code>, for instance: <code>getHomePageData()</code>, <code>getProductListPageData()</code>, etc.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="practice-the-interesting-automate-the-boring"><a class="header" href="#practice-the-interesting-automate-the-boring">Practice the interesting, automate the boring</a></h1>
+<h2 id="problem-8"><a class="header" href="#problem-8">Problem</a></h2>
+<p>How to use Large Language Models (LLMs) to increase throughput without sacrificing learning.</p>
+<h2 id="context-8"><a class="header" href="#context-8">Context</a></h2>
+<p>Engineers use LLMs to code.
+Code throughput increases, but knowledge retention decreases among engineers.</p>
+<p>Effects on <a href="https://dora.dev/guides/dora-metrics-four-keys/">DORA metrics</a>:</p>
+<ul>
+<li>increased deployment frequency (good)</li>
+<li>smaller lead time (good)</li>
+<li>higher mean time to recovery (bad)</li>
+</ul>
+<p>Qualitative effects:</p>
+<ul>
+<li>shallower technical conversations</li>
+<li>engineers do not remember how they implemented the internals of a feature</li>
+</ul>
+<h2 id="solution-8"><a class="header" href="#solution-8">Solution</a></h2>
+<p>Do not use LLMs when practice is needed. Instead, use LLMs to automate routine tasks.<br />
+The rule of thumb is: if something is boring, delegate it to a LLM. If something is still interesting, do it yourself.</p>
+<h3 id="learning-requires-practice"><a class="header" href="#learning-requires-practice">Learning requires practice</a></h3>
+<p>Learning requires repetition. Mental models strengthen and gain higher resolution with deliberate practice.<br />
+Delegating a new skill to LLMs after doing it just a few times hinders learning.</p>
+<h3 id="when-to-use-llm"><a class="header" href="#when-to-use-llm">When to use LLM</a></h3>
+<h4 id="prototyping"><a class="header" href="#prototyping">Prototyping</a></h4>
+<p>Quickly building different prototypes to compare them, thus increasing the chance of making the right choice.<br />
+Examples are: software architectures, UI mock-ups, hackathons, etc.</p>
+<h4 id="new-instance-of-an-existing-feature"><a class="header" href="#new-instance-of-an-existing-feature">New instance of an existing feature</a></h4>
+<p>Implement a new instance of a very well established feature.<br />
+For instance: yet another product list page for a new product category.</p>
+<h4 id="refactoring-at-scale"><a class="header" href="#refactoring-at-scale">Refactoring at scale</a></h4>
+<p>Once the same refactoring has been done several times, and engineers move from <em>being comfortable doing it</em> to <em>being bored by doing it</em>.</p>
+<h4 id="simplifying-information-gathering"><a class="header" href="#simplifying-information-gathering">Simplifying information gathering</a></h4>
+<p>Explore documentation efficiently, reduce the initial cognitive load with new technologies (e.g. boilerplate code for external systems integration).</p>
+<h4 id="one-time-occurrences"><a class="header" href="#one-time-occurrences">One time occurrences</a></h4>
+<p>When doing something we are not planning or interested in doing again in the future.<br />
+For example, low impact internal tool (i.e. boring, not interesting).</p>
+<h3 id="when-not-to-use-llm"><a class="header" href="#when-not-to-use-llm">When not to use LLM</a></h3>
+<h4 id="practicing-a-new-skill"><a class="header" href="#practicing-a-new-skill">Practicing a new skill</a></h4>
+<p>If you are learning test driven development (TDD), don't let the LLM code.<br />
+Ask for feedback to the LLM, especially if not pairing. Be mindful to weight and discuss the feedback with others more experienced.</p>
+<h3 id="spaced-repetitions"><a class="header" href="#spaced-repetitions">Spaced repetitions</a></h3>
+<p>Without practice, it is normal to become rusty even after having mastered something.<br />
+We are back to a situation when doing something ourselves is interesting.<br />
+Stop delegating to LLMs until it is boring again.</p>
+<h2 id="notes-6"><a class="header" href="#notes-6">Notes</a></h2>
+<h3 id="not-black-and-white"><a class="header" href="#not-black-and-white">Not black and white</a></h3>
+<p>There is a difference between using LLMs to prompt your way through an entire feature, and using it to make a function more idiomatic in TypeScript.<br />
+LLMs can act as a good sparring partner, or bring us to places where we would not like to be.<br />
+They are not good or bad per se, we just need to learn when it is better to slow down or speed up.</p>
+<h3 id="engineering-instead-of-vibe-coding"><a class="header" href="#engineering-instead-of-vibe-coding">Engineering instead of vibe coding</a></h3>
+<p>The context size of each agent is key.<br />
+Have one agent acting as a planner and multiple agents acting as builders.<br />
+The builders must have very specific roles and perform very small tasks.
+For instance, if doing TDD: one agent write the tests, one agent makes the tests pass, one agent refactors.<br />
+Have a common initial prompt to specify coding conventions, testing strategy, tech principles, and cross-functional requirements.<br />
+Each repository has a folder containing the above prompts. For mono-repo, this is per service.</p>
+<h1 id="credits-2"><a class="header" href="#credits-2">Credits</a></h1>
+<p>Thanks to Sebastian Roidl for the &quot;Engineering instead of vibe coding&quot; section.</p>
 
                     </main>
 
