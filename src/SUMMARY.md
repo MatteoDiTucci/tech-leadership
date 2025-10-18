@@ -11,4 +11,4 @@
     - [Lightweight business configuration](tech-expertise/lightweight-business-configuration.md)
     - [Long lasting tech initiative](tech-expertise/long-lasting-tech-initiative.md)
     - [Page data](tech-expertise/page-data.md)
-    - [Practice the interesting automate the-boring](tech-expertise/practice-the-interesting-automate-the-boring.md)
+    - [Practice the interesting, automate the-boring](tech-expertise/practice-the-interesting-automate-the-boring.md)
