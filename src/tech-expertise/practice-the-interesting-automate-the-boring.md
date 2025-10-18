@@ -55,6 +55,7 @@ Without practice, it is normal to become rusty even after having mastered someth
 We are back to a situation when doing something ourselves is interesting.  
 Stop delegating to LLMs until it is boring again.
 
+
 ## Notes
 
 ### Not black and white
