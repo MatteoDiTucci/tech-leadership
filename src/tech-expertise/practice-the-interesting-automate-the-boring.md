@@ -72,5 +72,5 @@ Have a common initial prompt to specify coding conventions, testing strategy, te
 Each repository has a folder containing the above prompts. For mono-repo, this is per service.
 
 
-# Credits
+## Credits
 Thanks to Sebastian Roidl for the "Engineering instead of vibe coding" section.
