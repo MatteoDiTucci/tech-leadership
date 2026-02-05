@@ -5,6 +5,7 @@
     - [Analytics dashboard as first user story](ways-of-working/analytics-dashboard-as-first-user-story.md)
     - [Bankrupt tech debt](ways-of-working/bankrupt-tech-debt.md)
     - [Communication patterns in remote team](ways-of-working/communication-patterns-in-remote-team.md)
+    - [Demo prototypes, not work in progress](ways-of-working/demo-prototypes-not-work-in-progress.md)
     - [Next quarter planning](ways-of-working/next-quarter-planning.md)
     - [No recurring meetings](ways-of-working/no-recurring-meetings.md)
 - [Tech](tech-expertise/introduction.md)
