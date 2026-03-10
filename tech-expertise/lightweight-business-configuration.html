@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html" class="active"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="../tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="../tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the-boring</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html" class="active"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="../tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="../tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -191,25 +191,25 @@ An engineer reverts the change and then reaches out to the author to fix the iss
 <ul>
 <li>No need to create a dedicated system to handle the commercial configuration</li>
 <li>Network fault-tolerant: commercial configuration is embedded at build time</li>
-<li>Unit tests acting as a quality gateway before changes affects production</li>
+<li>Unit tests acting as a quality gateway before changes affect production</li>
 <li>Configuration changes versioned in git</li>
 </ul>
 <h3 id="cons"><a class="header" href="#cons">Cons</a></h3>
 <ul>
-<li>Not custom validation possible in the GitHub web interface (e.g. invalid date format)</li>
+<li>No custom validation possible in the GitHub web interface (e.g. invalid date format)</li>
 <li>Basic JSON file manipulation needed by non-technical roles</li>
 <li>Changes need to wait a handful of minutes to be deployed in production</li>
 <li>Non-technical roles need to create a GitHub account, per person</li>
 </ul>
 <h2 id="note"><a class="header" href="#note">Note</a></h2>
 <h3 id="next-iterations"><a class="header" href="#next-iterations">Next iterations</a></h3>
-<p>If the proposed JSON approach suffer from poor UX, the content management system is likely the next step.<br />
+<p>If the proposed JSON approach suffers from poor UX, the content management system is likely the next step.<br />
 If the business configuration grows in complexity, we have identified a standalone business subdomain. 
 This requires its own back-end system with a UI to configure the changes.</p>
 <h2 id="credits"><a class="header" href="#credits">Credits</a></h2>
 <ul>
 <li>Erik Simon: for proposing custom extensions to the content management system as an interesting alternative</li>
-<li>Lukasz Plotnicki: for helping me to simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
+<li>Lukasz Plotnicki: for helping me simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
 </ul>
 
                     </main>
