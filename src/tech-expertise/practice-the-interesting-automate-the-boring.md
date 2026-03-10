@@ -48,7 +48,7 @@ For example, low impact internal tool (i.e. boring, not interesting).
 
 #### Practicing a new skill
 If you are learning test driven development (TDD), don't let the LLM code.  
-Ask for feedback to the LLM, especially if not pairing. Be mindful to weight and discuss the feedback with others more experienced.
+Ask for feedback from the LLM, especially if not pairing. Be mindful to weigh and discuss the feedback with others more experienced.
 
 ### Spaced repetitions
 Without practice, it is normal to become rusty even after having mastered something.  
@@ -67,7 +67,7 @@ They are not good or bad per se, we just need to learn when it is better to slow
 The context size of each agent is key.  
 Have one agent acting as a planner and multiple agents acting as builders.  
 The builders must have very specific roles and perform very small tasks.
-For instance, if doing TDD: one agent write the tests, one agent makes the tests pass, one agent refactors.  
+For instance, if doing TDD: one agent writes the tests, one agent makes the tests pass, one agent refactors.  
 Have a common initial prompt to specify coding conventions, testing strategy, tech principles, and cross-functional requirements.  
 Each repository has a folder containing the above prompts. For mono-repo, this is per service.
 

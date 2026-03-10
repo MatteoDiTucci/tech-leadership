@@ -8,18 +8,18 @@ The changes are invisible outside the codebase, so it is hard to define success 
 Examples of long-lasting tech initiatives are:
 - refactoring an e-commerce cart logic as it is too complex and slow
 - migrating the integration layer with a content management system
-- improve the continuous deployment pipeline as it is too slow
+- improving the continuous deployment pipeline as it is too slow
 
 ## Solution
-Treat tech initiatives exactly like products ones. Artifacts are different, but the lifecycle is the same.  
+Treat tech initiatives exactly like product ones. Artifacts are different, but the lifecycle is the same.  
 Stakeholders can be inside and outside the team, sometimes are simply the engineers maintaining a system.
 
 ### Problem definition
 Get the stakeholders together to define:
 - what is the problem
-- who is impacting
+- who is impacted
 - what are the consequences
-- initial risk, assumption, issues, dependencies (RAIDs)
+- risk, assumption, issues, dependencies (RAIDs)
 
 ### Analysis
 Analyze the problem and compare different solutions.  
@@ -35,7 +35,7 @@ For example:
 This must be done as the very first user story of the initiative.
 
 ### Communicate progress
-The artifacts that define success reflects the progress of the initiative so far.  
+The artifacts that define success reflect the progress of the initiative so far.  
 Ideally this is automatically shown, for instance in the case of observability dashboards.  
 Other times, they need to be updated manually, like with architecture diagrams.
 

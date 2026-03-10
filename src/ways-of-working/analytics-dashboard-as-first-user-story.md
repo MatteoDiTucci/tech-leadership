@@ -11,14 +11,14 @@ Everything looks straightforward because at this stage the initiative is in isol
 
 Once live, things get harder.  
 The initiative is now part of a complex system with many variables affecting the same metrics.  
-For example, data tracking can be too corse grained or an ongoing marketing campaign can skew the results.
+For example, data tracking can be too coarse grained or an ongoing marketing campaign can skew the results.
 
 ## Solution
 The first user story of an initiative is to build the analytics dashboard.
 This dashboard encodes the success criteria of the initiative.   
 The benefits are:
 - Hard conversations start earlier, for example how to detect revenue cannibalization
-- Tracking gaps surface sooner, so they do not increase scope unexpectedly just before to go-live
+- Tracking gaps surface sooner, so they do not increase scope unexpectedly just before the go-live
 - More trustworthy success criteria, as there is no retrofitting to what is measured after go-live
 
 ### A/B testing
@@ -28,7 +28,7 @@ Understanding this close to go-live, or worse after it, can be very costly.
 ## Notes
 
 ### Analytics dashboard for tech initiatives
-Analytics dashboard are fundamental for product initiatives as for tech ones.  
+Analytics dashboards are fundamental for product initiatives as well as for tech ones.  
 In terms of tools, product analytics dashboards often take the form of something like [Mixpanel](https://mixpanel.com),
 while tech dashboards of something like [Datadog](https://www.datadoghq.com/).
 

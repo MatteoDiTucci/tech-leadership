@@ -9,8 +9,8 @@ This problem applies to both remote and co-located teams.
 
 Following are some examples of how the problem manifests itself:
 - Standup becomes a status update. People are peer pressured to say something even if they already aligned asynchronously  
-- Demo has either missing key stakeholders, or they provide disrupting feedback that lead to significant rework
-- User story refinement have 2 people discussing and all the rest sleeping
+- Demo has either missing key stakeholders, or they provide disruptive feedback that leads to significant rework
+- User story refinement has 2 people discussing and all the rest sleeping
 
 ## Solution
 Delete all recurring events from the team calendar.  
@@ -23,7 +23,7 @@ Improve over the 3 principles of: visualization of work, definition of done, sho
 ### User story refinement
 Assign one representative per role (e.g. product owner, UX designer, engineer) to each user story.  
 Let them refine the user story asynchronously.  
-They will set on demand meetings when the deem pairing necessary.
+They will set on-demand meetings when they deem it necessary.
 
 ### Demo
 Schedule a demo meeting as soon as the team has something to show to get feedback.  
@@ -31,9 +31,9 @@ Invite only relevant stakeholders.
 Do not accumulate work in progress for a generic demo meeting.
 
 ### Retrospective
-This is the only recurring meeting worth to have.  
+This is the only recurring meeting worth having.  
 It is a safety net against human arrogance to believe we are always the best version of ourselves.
 
 ## Notes
-Recurring meetings are not evil per se, and they are definitely helpful in chaotic environments. However, they are a crutch.   
+Recurring meetings are not evil per se, and they are definitely helpful in chaotic environments. However, they are a crutch.  
 High performing teams should have meetings adapting to their rhythm, not the other way around.

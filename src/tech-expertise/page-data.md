@@ -3,7 +3,7 @@
 ## Problem
 In a single page application, a page fetches data from different external systems.  
 Adding new functionalities to the page gets harder because the unit tests are increasingly complex around faking external systems.  
-This happens because unit tests are coupled to the internals of how data are fetched and transformed.
+This happens because unit tests are coupled to the internals of how data is fetched and transformed.
 
 ## Context
 - The page is a Next.js server side component
@@ -25,7 +25,7 @@ An example of such function can be:
 export const getHomePageData = (locale: Locale) => {
     const homePageContent = cmsClient().getHomePage() 
     const footer = cmsClient().getFooter() 
-    const productRecommendations = productService().getReccomendations() 
+    const productRecommendations = productService().getRecommendations() 
     
     return {
         footer,
@@ -46,5 +46,5 @@ This means the page can go back to its main responsibility: presentation through
 ## Notes
 
 ### Back-end for front-end
-The `getPageData()` function can be thought as a tiny back-end-for-front-end.  
+The `getPageData()` function can be thought of as a tiny back-end-for-front-end.  
 Each page has its own `getPageData()`, for instance: `getHomePageData()`, `getProductListPageData()`, etc.

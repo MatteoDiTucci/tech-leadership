@@ -29,24 +29,24 @@ However, after an initiative is completed, we need to be in a better state than 
 If the remaining tech debt is relevant, it will soon pop up again as part of a new initiative
 
 ### Important tech debt can't be lost
-Do not fear to lose track of important tech debt because of declaring bankruptcy.  
+Do not fear losing track of important tech debt because of declaring bankruptcy.  
 If a piece of tech debt is important, it will be evident as part of the analysis of a new initiative
 
 ### Tech debt is not tech work
 An initiative can be either product work or tech work.  
-Tech work is what is needed to keep systems operational, not matter if they are customer-facing or internal.  
-So tech work not tech debt, and it should be delivered mixed with product work through any given interval of time (e.g. 80/20 product/tech work split)
+Tech work is what is needed to keep systems operational, regardless of whether they are customer-facing or internal.  
+So tech work is not tech debt, and it should be delivered mixed with product work through any given interval of time (e.g. 80/20 product/tech work split)
 
 ## Discarded solutions
 
 #### Quarter tech debt
 Here tech debt is bankrupted at the end of each quarter.  
-We are back to the original problem. However, by setting an expiration date on, we do not cumulate stale tech debt forever.  
+We are back to the original problem. However, by setting an expiration date on it, we do not cumulate stale tech debt forever.  
 This might be a good intermediate step before adopting the proposed solution
 
 #### Tech debt board kept up to date
 There is a recurring meeting where all engineers or at least the tech leads go through the tech debt board and prioritize it.  
-This approach is very expensive in terms of time and cognitive load as the board keeps growing through time.  
+This approach is very expensive in terms of time and cognitive load as the board keeps growing over time.  
 This is better than just having a graveyard tech board where nobody is responsible.  
 However, the lack of an expiration date makes it an ever-increasing burden for the responsible engineers.
 

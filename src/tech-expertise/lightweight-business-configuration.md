@@ -40,11 +40,11 @@ An engineer reverts the change and then reaches out to the author to fix the iss
 ### Pros
 - No need to create a dedicated system to handle the commercial configuration
 - Network fault-tolerant: commercial configuration is embedded at build time
-- Unit tests acting as a quality gateway before changes affects production
+- Unit tests acting as a quality gateway before changes affect production
 - Configuration changes versioned in git
 
 ### Cons
-- Not custom validation possible in the GitHub web interface (e.g. invalid date format)
+- No custom validation possible in the GitHub web interface (e.g. invalid date format)
 - Basic JSON file manipulation needed by non-technical roles
 - Changes need to wait a handful of minutes to be deployed in production
 - Non-technical roles need to create a GitHub account, per person
@@ -53,10 +53,10 @@ An engineer reverts the change and then reaches out to the author to fix the iss
 ## Note
 
 ### Next iterations
-If the proposed JSON approach suffer from poor UX, the content management system is likely the next step.  
+If the proposed JSON approach suffers from poor UX, the content management system is likely the next step.  
 If the business configuration grows in complexity, we have identified a standalone business subdomain. 
 This requires its own back-end system with a UI to configure the changes.
 
 ## Credits
 - Erik Simon: for proposing custom extensions to the content management system as an interesting alternative
-- Lukasz Plotnicki: for helping me to simplify the proposed solution without falling into security traps like locally forking the GitHub repo
+- Lukasz Plotnicki: for helping me simplify the proposed solution without falling into security traps like locally forking the GitHub repo

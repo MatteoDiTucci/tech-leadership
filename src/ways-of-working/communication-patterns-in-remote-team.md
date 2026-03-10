@@ -49,7 +49,7 @@ How to communicate in a software delivery team to make sure:
     - Use Slack for urgent communication
     - Team members are expected to skim through the notifications twice a day to triage and reply
     - Bring back decision-making from Slack and meetings to the Project Management tool
-- Every initiative has its on board
+- Every initiative has its own board
     - This board clarifies what has been done and what is left to do
     - Tickets are organized in 3 sections: problem definition, analysis, delivery
     - Delivery section can be broken down into multiple sections, one per go-live
@@ -85,9 +85,9 @@ How to communicate in a software delivery team to make sure:
 - Sorry [Paul Graham](https://paulgraham.com/makersschedule.html)
 
 ### Repetition is key
-- Have 1 goal at time for the team
+- Have 1 goal at a time for the team
 - Use repetition in written and verbal communications to remind what the current goal is
 - This simplifies decision-making and prioritization at any level
 
 ## Credits
-Thanks to David Swallow, who insisted for no direct Slack tagging in our team. We were skeptical, now we love it.
+Thanks to David Swallow, who insisted on no direct Slack tagging in our team. We were skeptical, now we love it.
