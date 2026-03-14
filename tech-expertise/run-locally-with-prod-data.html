@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lightweight business configuration - Tech Leadership: I&#x27;ll go first</title>
+        <title>Run locally with prod data - Tech Leadership: I&#x27;ll go first</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html" class="active"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="../tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="../tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li><li class="chapter-item expanded "><a href="../tech-expertise/run-locally-with-prod-data.html"><strong aria-hidden="true">3.5.</strong> Run locally with prod data</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="../ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="../ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="../ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="../ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="../ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="../tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="../tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="../tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="../tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li><li class="chapter-item expanded "><a href="../tech-expertise/run-locally-with-prod-data.html" class="active"><strong aria-hidden="true">3.5.</strong> Run locally with prod data</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,86 +143,51 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="lightweight-business-configuration"><a class="header" href="#lightweight-business-configuration">Lightweight Business Configuration</a></h1>
+                        <h1 id="run-locally-with-prod-data"><a class="header" href="#run-locally-with-prod-data">Run locally with prod data</a></h1>
 <h2 id="problem"><a class="header" href="#problem">Problem</a></h2>
-<p>An e-commerce has some commercial configuration to update every now and then.
-For example: what products are in pre-sale, what products are under promotion, etc.</p>
-<p>How to enable non-technical roles to update such configuration with minimal effort?</p>
+<p>Engineers complain that it is hard to develop new features because dev environment is not aligned with production.</p>
 <h2 id="context"><a class="header" href="#context">Context</a></h2>
-<ul>
-<li>Update frequency: once a day</li>
-<li>Data to change: a handful of products SKU or dates</li>
-<li>Existing systems:
-<ul>
-<li>Front-end app</li>
-<li>Product catalog back-end app</li>
-<li>Headless content management system (third party)</li>
-</ul>
-</li>
-<li>Current path to prod:
-<ul>
-<li>Continuous Deployment</li>
-</ul>
-</li>
-<li>Current solution:
-<ul>
-<li>Configuration is stored in code as a handful of JSON files inside the front-end app</li>
-<li>For any configuration change, a support ticket to engineers is created</li>
-</ul>
-</li>
-</ul>
+<p>Engineers run the app on their laptops to have quick feedback about new functionalities under development.<br />
+The app integrates with the dev environment APIs. Such APIs can be internal or external to the company.</p>
+<p>Data returned by the dev environment APIs are poor and inconsistent.<br />
+The APIs have bad availability and performance in the dev environment.</p>
 <h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
-<p>Non-technical roles change configuration autonomously using GitHub web interface.
-<img width="1596" height="333" alt="image" src="https://github.com/user-attachments/assets/7d232fb5-ed50-4efc-aadd-e7d0bab997b4" /></p>
+<p>Engineers run the app locally by pointing to production APIs.<br />
+Data are abundant, consistent and highly available.</p>
 <h3 id="security"><a class="header" href="#security">Security</a></h3>
-<p>Non-technical roles adhere to the same security practices as engineers (e.g. strong passwords, password manager, 2nd factor authentication, encrypted laptop filesystem, etc.).<br />
-Non-technical roles have write privileges on the front-end app repository, but not admin ones.</p>
-<h3 id="testing"><a class="header" href="#testing">Testing</a></h3>
-<p>Unit tests over the JSON files cover against:</p>
-<ul>
-<li>malformed JSON</li>
-<li>content validation (e.g. pre-sale dates in the past)</li>
-<li>business invariant violations (e.g. avoid duplicates)</li>
-</ul>
-<h3 id="failure-and-recovery"><a class="header" href="#failure-and-recovery">Failure and recovery</a></h3>
-<p>If a non-technical role makes a mistake with a JSON file, then the Continuous Deployment pipeline breaks.<br />
-An engineer reverts the change and then reaches out to the author to fix the issue together</p>
-<h3 id="pros"><a class="header" href="#pros">Pros</a></h3>
-<ul>
-<li>No need to create a dedicated system to handle the commercial configuration</li>
-<li>Network fault-tolerant: commercial configuration is embedded at build time</li>
-<li>Unit tests acting as a quality gateway before changes affect production</li>
-<li>Configuration changes versioned in git</li>
-</ul>
-<h3 id="cons"><a class="header" href="#cons">Cons</a></h3>
-<ul>
-<li>No custom validation possible in the GitHub web interface (e.g. invalid date format)</li>
-<li>Basic JSON file manipulation needed by non-technical roles</li>
-<li>Changes need to wait a handful of minutes to be deployed in production</li>
-<li>Non-technical roles need to create a GitHub account, per person</li>
-</ul>
-<h2 id="note"><a class="header" href="#note">Note</a></h2>
-<h3 id="next-iterations"><a class="header" href="#next-iterations">Next iterations</a></h3>
-<p>If the proposed JSON approach suffers from poor UX, the content management system is likely the next step.<br />
-If the business configuration grows in complexity, we have identified a standalone business subdomain. 
-This requires its own back-end system with a UI to configure the changes.</p>
-<h2 id="credits"><a class="header" href="#credits">Credits</a></h2>
-<ul>
-<li>Erik Simon: for proposing custom extensions to the content management system as an interesting alternative</li>
-<li>Lukasz Plotnicki: for helping me simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
-</ul>
+<p>API keys used locally must be different to the ones used by production deployments.<br />
+The scope of the API keys is read-only whenever possible.</p>
+<h3 id="test-accounts"><a class="header" href="#test-accounts">Test accounts</a></h3>
+<p>If a read-only scope is obvious to read APIs, it gets more tricky for write APIs as we do not want to mess up with production data.
+The answer here is test user accounts. Data generated by test user accounts cannot be seen by real ones.<br />
+A common implementation is a &quot;test&quot; boolean column in a database table.<br />
+APIs that perform side effects (e.g. payment gateway, order fulfillment, etc.), return success to requests from test user accounts, but without carrying out the side effect.</p>
+<h3 id="availability"><a class="header" href="#availability">Availability</a></h3>
+<p>The APIs enforce quotas by API key to prevent local bugs from affecting production performance (e.g. infinite loop).<br />
+Although it is unlikely that a single machine can generate enough traffic to affect production systems, API quotas are a good practice that should be applied to testing API keys too.</p>
+<h3 id="why-to-keep-dev-environment"><a class="header" href="#why-to-keep-dev-environment">Why to keep dev environment</a></h3>
+<p>Even if we do not use dev environment for testing, it is still a valuable safety net for infrastructure changes.<br />
+For example, database migrations.</p>
+<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<h3 id="alternative-approach-local-data-setup"><a class="header" href="#alternative-approach-local-data-setup">Alternative approach: local data setup</a></h3>
+<p>An alternative to using dev environment APIs, is to leverage data fixtures defined locally.<br />
+This is easy to set up especially if there are already well-defined test fixtures in place.<br />
+When the app runs locally, it fakes all APIs integration and fetches the local data fixtures.</p>
+<p>Compared to testing against dev environment, this local approach ensures a higher level of autonomy for engineers.</p>
+<p>However, compared to testing against prod, there are two shortcomings:</p>
+<ol>
+<li>Data are not as rich</li>
+<li>Usually, the local data are not maintained and they slowly rot until they become unusable</li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../tech-expertise/introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../tech-expertise/practice-the-interesting-automate-the-boring.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../tech-expertise/long-lasting-tech-initiative.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -230,13 +195,10 @@ This requires its own back-end system with a UI to configure the changes.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../tech-expertise/introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../tech-expertise/practice-the-interesting-automate-the-boring.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../tech-expertise/long-lasting-tech-initiative.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
