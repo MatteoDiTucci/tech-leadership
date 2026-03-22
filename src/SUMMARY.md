@@ -14,3 +14,4 @@
     - [Page data](tech-expertise/page-data.md)
     - [Practice the interesting, automate the boring](tech-expertise/practice-the-interesting-automate-the-boring.md)
     - [Run locally with prod data](tech-expertise/run-locally-with-prod-data.md)
+    - [Share DTOs](tech-expertise/share-dtos.md)
