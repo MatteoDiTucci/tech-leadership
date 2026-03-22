@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li><li class="chapter-item expanded "><a href="tech-expertise/run-locally-with-prod-data.html"><strong aria-hidden="true">3.5.</strong> Run locally with prod data</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li><li class="chapter-item expanded "><a href="tech-expertise/run-locally-with-prod-data.html"><strong aria-hidden="true">3.5.</strong> Run locally with prod data</a></li><li class="chapter-item expanded "><a href="tech-expertise/share-dtos.html"><strong aria-hidden="true">3.6.</strong> Share DTOs</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -778,6 +778,30 @@ When the app runs locally, it fakes all APIs integration and fetches the local d
 <li>Data are not as rich</li>
 <li>Usually, the local data are not maintained and they slowly rot until they become unusable</li>
 </ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="share-dtos"><a class="header" href="#share-dtos">Share DTOs</a></h1>
+<h2 id="problem-11"><a class="header" href="#problem-11">Problem</a></h2>
+<p>One service integrates with another one.<br />
+To avoid regressions, contract testing is in place, for instance by using <a href="https://docs.pact.io/">Pact</a>.<br />
+Engineers complain about the overhead of the contract testing harness and its maintenance.</p>
+<h2 id="context-11"><a class="header" href="#context-11">Context</a></h2>
+<p>The services are part of the same mono-repo, and they are written in the same language (e.g. Kotlin).<br />
+Before contract testing, other solutions like API versioning were tried, but they implied even more maintenance and cognitive load.</p>
+<h2 id="solution-11"><a class="header" href="#solution-11">Solution</a></h2>
+<p>Use the same DTOs (Data Transfer Objects) across the two services.<br />
+Contract testing comes out of the box thanks to static types and it's verified at compile time.</p>
+<h3 id="where-the-dtos-live"><a class="header" href="#where-the-dtos-live">Where the DTOs live</a></h3>
+<p>Extract the DTOs from the producer service into a new folder which becomes a dependency of both the producer and consumer service.<br />
+The new folder is just a new NPM package in the Javascript/TypeScript world, or a new Gradle project for Java/Kotlin.<br />
+Whenever a change in the DTOs is made, the continuous deployment pipeline of both services is triggered.</p>
+<h3 id="expand-and-contract"><a class="header" href="#expand-and-contract">Expand and contract</a></h3>
+<p>The team of the producer service follows an expand-and-contract approach whenever a change in the DTOs is needed.<br />
+This prevents regressions, big bang releases and planned downtime.</p>
+<h3 id="integration-tests"><a class="header" href="#integration-tests">Integration tests</a></h3>
+<p>Integration tests are still needed, but they are few and less complex.<br />
+Usually they are just a simple happy path, plus the sad paths (e.g. 5XX, 4XX, timeout, connection error)</p>
+<h3 id="teams-collaboration"><a class="header" href="#teams-collaboration">Teams collaboration</a></h3>
+<p>As with contract testing, shared DTOs do not replace team collaboration.<br />
+However, the feedback loop is faster and the overhead much lower.</p>
 
                     </main>
 
