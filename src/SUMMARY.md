@@ -8,6 +8,7 @@
     - [Demo prototypes, not work in progress](ways-of-working/demo-prototypes-not-work-in-progress.md)
     - [Next quarter planning](ways-of-working/next-quarter-planning.md)
     - [No recurring meetings](ways-of-working/no-recurring-meetings.md)
+    - [System doctor](ways-of-working/system-doctor.md)
 - [Tech](tech-expertise/introduction.md)
     - [Lightweight business configuration](tech-expertise/lightweight-business-configuration.md)
     - [Long lasting tech initiative](tech-expertise/long-lasting-tech-initiative.md)
