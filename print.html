@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li><li class="chapter-item expanded "><a href="tech-expertise/run-locally-with-prod-data.html"><strong aria-hidden="true">3.5.</strong> Run locally with prod data</a></li><li class="chapter-item expanded "><a href="tech-expertise/share-dtos.html"><strong aria-hidden="true">3.6.</strong> Share DTOs</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="ways-of-working/introduction.html"><strong aria-hidden="true">2.</strong> Ways of working</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ways-of-working/analytics-dashboard-as-first-user-story.html"><strong aria-hidden="true">2.1.</strong> Analytics dashboard as first user story</a></li><li class="chapter-item expanded "><a href="ways-of-working/bankrupt-tech-debt.html"><strong aria-hidden="true">2.2.</strong> Bankrupt tech debt</a></li><li class="chapter-item expanded "><a href="ways-of-working/communication-patterns-in-remote-team.html"><strong aria-hidden="true">2.3.</strong> Communication patterns in remote team</a></li><li class="chapter-item expanded "><a href="ways-of-working/demo-prototypes-not-work-in-progress.html"><strong aria-hidden="true">2.4.</strong> Demo prototypes, not work in progress</a></li><li class="chapter-item expanded "><a href="ways-of-working/next-quarter-planning.html"><strong aria-hidden="true">2.5.</strong> Next quarter planning</a></li><li class="chapter-item expanded "><a href="ways-of-working/no-recurring-meetings.html"><strong aria-hidden="true">2.6.</strong> No recurring meetings</a></li><li class="chapter-item expanded "><a href="ways-of-working/system-doctor.html"><strong aria-hidden="true">2.7.</strong> System doctor</a></li></ol></li><li class="chapter-item expanded "><a href="tech-expertise/introduction.html"><strong aria-hidden="true">3.</strong> Tech</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tech-expertise/lightweight-business-configuration.html"><strong aria-hidden="true">3.1.</strong> Lightweight business configuration</a></li><li class="chapter-item expanded "><a href="tech-expertise/long-lasting-tech-initiative.html"><strong aria-hidden="true">3.2.</strong> Long lasting tech initiative</a></li><li class="chapter-item expanded "><a href="tech-expertise/page-data.html"><strong aria-hidden="true">3.3.</strong> Page data</a></li><li class="chapter-item expanded "><a href="tech-expertise/practice-the-interesting-automate-the-boring.html"><strong aria-hidden="true">3.4.</strong> Practice the interesting, automate the boring</a></li><li class="chapter-item expanded "><a href="tech-expertise/run-locally-with-prod-data.html"><strong aria-hidden="true">3.5.</strong> Run locally with prod data</a></li><li class="chapter-item expanded "><a href="tech-expertise/share-dtos.html"><strong aria-hidden="true">3.6.</strong> Share DTOs</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -526,14 +526,62 @@ It is a safety net against human arrogance to believe we are always the best ver
 <h2 id="notes-3"><a class="header" href="#notes-3">Notes</a></h2>
 <p>Recurring meetings are not evil per se, and they are definitely helpful in chaotic environments. However, they are a crutch.<br />
 High performing teams should have meetings adapting to their rhythm, not the other way around.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-doctor"><a class="header" href="#system-doctor">System Doctor</a></h1>
+<h2 id="problem-6"><a class="header" href="#problem-6">Problem</a></h2>
+<p>Production systems and internal tools require periodic maintenance and small improvements to remain healthy.<br />
+Engineers neglect such tasks because they are focused on delivery.<br />
+This results in degraded ways of working and lower quality for end users.</p>
+<h2 id="context-6"><a class="header" href="#context-6">Context</a></h2>
+<p>Examples of periodic maintenance and small improvements:</p>
+<ul>
+<li>Dependencies updates</li>
+<li>Security vulnerability fixes</li>
+<li>Fixing flaky tests</li>
+<li>Improving continuous deployment pipeline speed</li>
+<li>Cleaning up observability dashboards</li>
+<li>Supporting other roles in their work (e.g. back-office automation, easier business configuration, etc.)</li>
+<li>Cross-functional checks (e.g. performance/SEO degradation)</li>
+</ul>
+<p>Such tasks are ignored in favor of delivery because their individual impact is low.
+However, their cumulative neglect increases feedback loops, making the whole company slower and less effective.</p>
+<p>Individual engineers try to address this, but are usually overwhelmed.
+Also, knowledge silos form as a result.</p>
+<h2 id="solution-6"><a class="header" href="#solution-6">Solution</a></h2>
+<p>Introduce a rotating role for all engineers responsible for periodic maintenance and small operational improvements.</p>
+<p>You can call this role system doctor, sheriff, firefighter, commander, etc.<br />
+I personally prefer <em>system doctor</em> or just <em>doctor</em> because it doesn't imply incident response or purely firefighting work.</p>
+<h3 id="doctors-expectations"><a class="header" href="#doctors-expectations">Doctor's expectations</a></h3>
+<p>When an engineer is the doctor:</p>
+<ul>
+<li>No delivery work is allowed. If the engineer is driving a delivery task, they must immediately hand it over or pause it</li>
+<li>Work is collected in a single cross-team board: the doctor's board. The doctor can only pick up tasks from the doctor's board</li>
+<li>Each task has a due date to prioritize work</li>
+</ul>
+<h3 id="doctors-board-boundaries"><a class="header" href="#doctors-board-boundaries">Doctor's board boundaries</a></h3>
+<ul>
+<li>Any task takes less than a day to complete. Anything larger is forwarded to teams' delivery boards for tech leads to discuss</li>
+<li>Any task belongs to a well-defined list of topics; anything else is rejected</li>
+<li>No bugs: the team that introduced them is responsible for fixing them</li>
+<li>Some tasks are recurring, ensuring a certain maintenance frequency.
+For example: dependencies updates, security vulnerability fixes, etc.</li>
+<li>Incident response is the responsibility of the on-call engineer, not the doctor</li>
+</ul>
+<h3 id="expected-benefits"><a class="header" href="#expected-benefits">Expected benefits</a></h3>
+<ul>
+<li>Systems remain healthy</li>
+<li>The majority of engineers stay focused on their tech and product initiatives</li>
+<li>Engineers are pushed out of their comfort zone and work on all parts of the systems</li>
+<li>Fewer knowledge silos among engineers</li>
+<li>Other departments improve their ways of working</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tech-expertise"><a class="header" href="#tech-expertise">Tech Expertise</a></h1>
 <p>The <a href="https://wiki.c2.com/?XpSimplicityRules">simplicity rules</a> that we learn for coding apply to systems design too.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lightweight-business-configuration"><a class="header" href="#lightweight-business-configuration">Lightweight Business Configuration</a></h1>
-<h2 id="problem-6"><a class="header" href="#problem-6">Problem</a></h2>
+<h2 id="problem-7"><a class="header" href="#problem-7">Problem</a></h2>
 <p>An e-commerce has some commercial configuration to update every now and then.
 For example: what products are in pre-sale, what products are under promotion, etc.</p>
 <p>How to enable non-technical roles to update such configuration with minimal effort?</p>
-<h2 id="context-6"><a class="header" href="#context-6">Context</a></h2>
+<h2 id="context-7"><a class="header" href="#context-7">Context</a></h2>
 <ul>
 <li>Update frequency: once a day</li>
 <li>Data to change: a handful of products SKU or dates</li>
@@ -556,7 +604,7 @@ For example: what products are in pre-sale, what products are under promotion, e
 </ul>
 </li>
 </ul>
-<h2 id="solution-6"><a class="header" href="#solution-6">Solution</a></h2>
+<h2 id="solution-7"><a class="header" href="#solution-7">Solution</a></h2>
 <p>Non-technical roles change configuration autonomously using GitHub web interface.
 <img width="1596" height="333" alt="image" src="https://github.com/user-attachments/assets/7d232fb5-ed50-4efc-aadd-e7d0bab997b4" /></p>
 <h3 id="security"><a class="header" href="#security">Security</a></h3>
@@ -597,17 +645,17 @@ This requires its own back-end system with a UI to configure the changes.</p>
 <li>Lukasz Plotnicki: for helping me simplify the proposed solution without falling into security traps like locally forking the GitHub repo</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="long-lasting-tech-initiative"><a class="header" href="#long-lasting-tech-initiative">Long lasting tech initiative</a></h1>
-<h2 id="problem-7"><a class="header" href="#problem-7">Problem</a></h2>
+<h2 id="problem-8"><a class="header" href="#problem-8">Problem</a></h2>
 <p>Several weeks are set aside for a tech initiative.<br />
 The changes are invisible outside the codebase, so it is hard to define success and communicate progress to stakeholders.</p>
-<h2 id="context-7"><a class="header" href="#context-7">Context</a></h2>
+<h2 id="context-8"><a class="header" href="#context-8">Context</a></h2>
 <p>Examples of long-lasting tech initiatives are:</p>
 <ul>
 <li>refactoring an e-commerce cart logic as it is too complex and slow</li>
 <li>migrating the integration layer with a content management system</li>
 <li>improving the continuous deployment pipeline as it is too slow</li>
 </ul>
-<h2 id="solution-7"><a class="header" href="#solution-7">Solution</a></h2>
+<h2 id="solution-8"><a class="header" href="#solution-8">Solution</a></h2>
 <p>Treat tech initiatives exactly like product ones. Artifacts are different, but the lifecycle is the same.<br />
 Stakeholders can be inside and outside the team, sometimes are simply the engineers maintaining a system.</p>
 <h3 id="problem-definition"><a class="header" href="#problem-definition">Problem definition</a></h3>
@@ -639,11 +687,11 @@ Other times, they need to be updated manually, like with architecture diagrams.<
 The most important one is exposing a shared mental model across the engineers working on the initiative.<br />
 Secondly, it is an effective way to communicate with stakeholders.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="page-data"><a class="header" href="#page-data">Page data</a></h1>
-<h2 id="problem-8"><a class="header" href="#problem-8">Problem</a></h2>
+<h2 id="problem-9"><a class="header" href="#problem-9">Problem</a></h2>
 <p>In a single page application, a page fetches data from different external systems.<br />
 Adding new functionalities to the page gets harder because the unit tests are increasingly complex around faking external systems.<br />
 This happens because unit tests are coupled to the internals of how data is fetched and transformed.</p>
-<h2 id="context-8"><a class="header" href="#context-8">Context</a></h2>
+<h2 id="context-9"><a class="header" href="#context-9">Context</a></h2>
 <ul>
 <li>The page is a Next.js server side component</li>
 <li>External systems are for instance: content management system (CMS) and product service</li>
@@ -652,7 +700,7 @@ This happens because unit tests are coupled to the internals of how data is fetc
 <li>Mocking capabilities are provided by Vitest</li>
 <li>When page unit tests fail, it is very difficult to understand what Vitest mock needs to be fixed</li>
 </ul>
-<h2 id="solution-8"><a class="header" href="#solution-8">Solution</a></h2>
+<h2 id="solution-9"><a class="header" href="#solution-9">Solution</a></h2>
 <p>Extract all the page data fetching and transformation into a single <code>getPageData()</code> function.
 Now we can:</p>
 <ul>
@@ -684,9 +732,9 @@ This means the page can go back to its main responsibility: presentation through
 <p>The <code>getPageData()</code> function can be thought of as a tiny back-end-for-front-end.<br />
 Each page has its own <code>getPageData()</code>, for instance: <code>getHomePageData()</code>, <code>getProductListPageData()</code>, etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="practice-the-interesting-automate-the-boring"><a class="header" href="#practice-the-interesting-automate-the-boring">Practice the interesting, automate the boring</a></h1>
-<h2 id="problem-9"><a class="header" href="#problem-9">Problem</a></h2>
+<h2 id="problem-10"><a class="header" href="#problem-10">Problem</a></h2>
 <p>How to use Large Language Models (LLMs) to increase throughput without sacrificing learning.</p>
-<h2 id="context-9"><a class="header" href="#context-9">Context</a></h2>
+<h2 id="context-10"><a class="header" href="#context-10">Context</a></h2>
 <p>Engineers use LLMs to code.
 Code throughput increases, but knowledge retention decreases among engineers.</p>
 <p>Effects on <a href="https://dora.dev/guides/dora-metrics-four-keys/">DORA metrics</a>:</p>
@@ -700,7 +748,7 @@ Code throughput increases, but knowledge retention decreases among engineers.</p
 <li>shallower technical conversations</li>
 <li>engineers do not remember how they implemented the internals of a feature</li>
 </ul>
-<h2 id="solution-9"><a class="header" href="#solution-9">Solution</a></h2>
+<h2 id="solution-10"><a class="header" href="#solution-10">Solution</a></h2>
 <p>Do not use LLMs when practice is needed. Instead, use LLMs to automate routine tasks.<br />
 The rule of thumb is: if something is boring, delegate it to a LLM. If something is still interesting, do it yourself.</p>
 <h3 id="learning-requires-practice"><a class="header" href="#learning-requires-practice">Learning requires practice</a></h3>
@@ -743,14 +791,14 @@ Each repository has a folder containing the above prompts. For mono-repo, this i
 <h2 id="credits-2"><a class="header" href="#credits-2">Credits</a></h2>
 <p>Thanks to Sebastian Roidl for the &quot;Engineering instead of vibe coding&quot; section.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="run-locally-with-prod-data"><a class="header" href="#run-locally-with-prod-data">Run locally with prod data</a></h1>
-<h2 id="problem-10"><a class="header" href="#problem-10">Problem</a></h2>
+<h2 id="problem-11"><a class="header" href="#problem-11">Problem</a></h2>
 <p>Engineers complain that it is hard to develop new features because dev environment is not aligned with production.</p>
-<h2 id="context-10"><a class="header" href="#context-10">Context</a></h2>
+<h2 id="context-11"><a class="header" href="#context-11">Context</a></h2>
 <p>Engineers run the app on their laptops to have quick feedback about new functionalities under development.<br />
 The app integrates with the dev environment APIs. Such APIs can be internal or external to the company.</p>
 <p>Data returned by the dev environment APIs are poor and inconsistent.<br />
 The APIs have bad availability and performance in the dev environment.</p>
-<h2 id="solution-10"><a class="header" href="#solution-10">Solution</a></h2>
+<h2 id="solution-11"><a class="header" href="#solution-11">Solution</a></h2>
 <p>Engineers run the app locally by pointing to production APIs.<br />
 Data are abundant, consistent and highly available.</p>
 <h3 id="security-1"><a class="header" href="#security-1">Security</a></h3>
@@ -779,14 +827,14 @@ When the app runs locally, it fakes all APIs integration and fetches the local d
 <li>Usually, the local data are not maintained and they slowly rot until they become unusable</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="share-dtos"><a class="header" href="#share-dtos">Share DTOs</a></h1>
-<h2 id="problem-11"><a class="header" href="#problem-11">Problem</a></h2>
+<h2 id="problem-12"><a class="header" href="#problem-12">Problem</a></h2>
 <p>One service integrates with another one.<br />
 To avoid regressions, contract testing is in place, for instance by using <a href="https://docs.pact.io/">Pact</a>.<br />
 Engineers complain about the overhead of the contract testing harness and its maintenance.</p>
-<h2 id="context-11"><a class="header" href="#context-11">Context</a></h2>
+<h2 id="context-12"><a class="header" href="#context-12">Context</a></h2>
 <p>The services are part of the same mono-repo, and they are written in the same language (e.g. Kotlin).<br />
 Before contract testing, other solutions like API versioning were tried, but they implied even more maintenance and cognitive load.</p>
-<h2 id="solution-11"><a class="header" href="#solution-11">Solution</a></h2>
+<h2 id="solution-12"><a class="header" href="#solution-12">Solution</a></h2>
 <p>Use the same DTOs (Data Transfer Objects) across the two services.<br />
 Contract testing comes out of the box thanks to static types and it's verified at compile time.</p>
 <h3 id="where-the-dtos-live"><a class="header" href="#where-the-dtos-live">Where the DTOs live</a></h3>
